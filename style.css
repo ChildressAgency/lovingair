@@ -13,5 +13,131 @@
   src: url("fonts/9697cfef-7816-47cc-81ed-c56c029d3bcf.eot?#iefix");
   src: url("fonts/9697cfef-7816-47cc-81ed-c56c029d3bcf.eot?#iefix") format("eot"), url("fonts/1f4274cd-2674-481e-9023-69e33ffca161.woff2") format("woff2"), url("fonts/5e8d493c-be01-44b9-962e-504a5cf10dd8.woff") format("woff"), url("fonts/ae36b4a0-aa2c-46cc-98d8-d8b7d22241dc.ttf") format("truetype");
 }
+.btn, .header__heading {
+  font-family: "Encode Sans", sans-serif;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+.header__announcement {
+  font-family: "Helvetica Neue Light", sans-serif;
+}
+
+.side-borders, .header__menu .nav-item {
+  transform: skew(-20deg);
+}
+
+.side-borders > *, .header__menu .nav-link {
+  transform: skew(20deg);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+}
+
+p {
+  margin-bottom: 1.6rem;
+}
+
+.header__main {
+  width: 100%;
+}
+.header__action {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+.header__quote {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.header__call {
+  color: #cb0009;
+  margin-left: 30px;
+  margin-right: 15px;
+  text-align: center;
+}
+.header__call img {
+  display: inline-block;
+  margin-right: 15px;
+}
+.header__phone {
+  display: inline-block;
+}
+.header__heading {
+  color: #000;
+  font-size: 24px;
+  text-align: center;
+}
+.header__menu {
+  font-size: 18px;
+}
+.header__menu .nav-item {
+  border-right: 1px solid #cb0009;
+  padding: 5px 10px;
+  transition: 0.3s ease background-color;
+}
+.header__menu .nav-item:last-of-type {
+  border: 0;
+}
+.header__menu .nav-item.active, .header__menu .nav-item:hover {
+  background-color: #cb0009;
+}
+.header__menu .nav-item.active .nav-link, .header__menu .nav-item:hover .nav-link {
+  color: #fff;
+}
+.header__menu .nav-link {
+  color: #000;
+}
+.header__announcement {
+  background-color: #0067b4;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 15px;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+}
+.header__announcement p {
+  margin-bottom: 0;
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.btn-primary {
+  background-color: #cb0009;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #fff;
+  border: 1px solid #cb0009;
+  color: #cb0009;
+}
+
+.side-borders {
+  border-left: 1px solid #cb0009;
+  border-right: 1px solid #cb0009;
+}
 
 /*# sourceMappingURL=style.css.map */
