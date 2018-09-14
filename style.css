@@ -197,12 +197,21 @@ p {
   align-items: center;
   display: flex;
   flex-direction: column;
-  font-size: 26px;
+  font-size: 16px;
   height: 100%;
   justify-content: center;
+  left: 300px;
+  right: 300px;
 }
-.home-hero .carousel-caption h2 {
+.home-hero .carousel__heading {
   font-size: 50px;
+}
+.home-hero .carousel__subheading {
+  font-size: 26px;
+}
+.home-hero .carousel__btn {
+  bottom: 10%;
+  position: absolute;
 }
 .home-hero .carousel-sidebar {
   align-items: center;
@@ -221,16 +230,16 @@ p {
   z-index: 9;
 }
 .home-hero .carousel-sidebar .discount {
+  align-items: center;
   background-color: #fff;
   color: #000;
+  display: flex;
   height: 50px;
+  justify-content: center;
   margin: 30px 0;
   padding: 5px 10px;
   position: relative;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .home-hero .carousel-sidebar .discount__flag {
   height: 50px;
