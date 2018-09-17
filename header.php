@@ -49,19 +49,15 @@
                         </button>
                         <div class="collapse navbar-collapse">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item active"><a href="#" class="nav-link">HOME</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link">ABOUT US</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link">HVAC SERVICES</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link">COMMERCIAL SERVICES</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link">CONTACT US</a></li>
+                                <li class="nav-item <?php if( is_front_page() ){ echo 'active'; } ?>"><a href="<?php echo esc_url( home_url() ); ?>" class="nav-link">HOME</a></li>
+                                <li class="nav-item <?php if( is_page( 'about-us' ) ){ echo 'active'; } ?>"><a href="<?php echo esc_url( home_url( 'about-us' ) ); ?>" class="nav-link">ABOUT US</a></li>
+                                <li class="nav-item <?php if( is_page( 'hvac-services' ) ){ echo 'active'; } ?>"><a href="<?php echo esc_url( home_url( 'hvac-services' ) ); ?>" class="nav-link">HVAC SERVICES</a></li>
+                                <li class="nav-item <?php if( is_page( 'commercial-services' ) ){ echo 'active'; } ?>"><a href="<?php echo esc_url( home_url( 'commercial-services' ) ); ?>" class="nav-link">COMMERCIAL SERVICES</a></li>
+                                <li class="nav-item <?php if( is_page( 'contact-us' ) ){ echo 'active'; } ?>"><a href="<?php echo esc_url( home_url( 'contact-us' ) ); ?>" class="nav-link">CONTACT US</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </nav>
-        </div>
-
-        <div class="header__announcement">
-            <p>September Special - Save 15% on all Services!</p>
         </div>
     </header>
