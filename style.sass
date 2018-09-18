@@ -1,18 +1,503 @@
-// sass-lint:disable no-duplicate-properties function-name-format
+/////////////////////////////////////////////////////////////////////
+// TABLE OF CONTENTS                                               //
+//                                                                 //
+// 1. Tags                                                         //
+// 2. Header                                                       //
+// 3. Content (Reusable)                                           //
+// 4. Home                                                         //
+// 5. Footer                                                       //
+//                                                                 //
+/////////////////////////////////////////////////////////////////////
 
-@font-face
-    font-family: 'Helvetica Neue Light'
-    src: url('fonts/1b950d2a-907a-4888-8056-0d44e8e86338.eot?#iefix')
-    src: url('fonts/1b950d2a-907a-4888-8056-0d44e8e86338.eot?#iefix') format('eot'), url('fonts/3a46542f-f429-4821-9a88-62e3be54a640.woff2') format('woff2'), url('fonts/50ac1699-f3d2-47b6-878f-67a368a17c41.woff') format('woff'), url('fonts/0be5590f-8353-4ef3-ada1-43ac380859f8.ttf') format('truetype')
+// sass-lint:disable function-name-format force-pseudo-nesting
+@import _variables.sass
 
-@font-face
-    font-family: 'Helvetica Neue'
-    src: url('fonts/f95f9fc2-ffda-431c-9d6a-2c3668f5b20b.eot?#iefix')
-    src: url('fonts/f95f9fc2-ffda-431c-9d6a-2c3668f5b20b.eot?#iefix') format('eot'), url('fonts/5b1fbd62-45dc-4433-a7df-a2b24a146411.woff2') format('woff2'), url('fonts/050b1948-f226-4d20-a65a-15d8ed031222.woff') format('woff'), url('fonts/beb88be6-2a60-46fe-914f-6892b3ae46ce.ttf') format('truetype')
 
-@font-face
-    font-family: 'Helvetica Neue Bold'
-    src: url('fonts/9697cfef-7816-47cc-81ed-c56c029d3bcf.eot?#iefix')
-    src: url('fonts/9697cfef-7816-47cc-81ed-c56c029d3bcf.eot?#iefix') format('eot'), url('fonts/1f4274cd-2674-481e-9023-69e33ffca161.woff2') format('woff2'), url('fonts/5e8d493c-be01-44b9-962e-504a5cf10dd8.woff') format('woff'), url('fonts/ae36b4a0-aa2c-46cc-98d8-d8b7d22241dc.ttf') format('truetype')
+*,
+*::before,
+*::after
+    box-sizing: inherit
+    margin: 0
+    padding: 0
 
+html
+    font-size: 62.5%
+
+body
+    @extend %font-body
+    box-sizing: border-box
+    font-size: 1.6rem
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    @extend %font-heading
+    margin-bottom: $margin-md
+
+h2
+    font-size: $font-size-heading
+
+h3
+    font-size: $font-size-subheading
+
+p
+    line-height: 1.5
+    margin-bottom: $margin-sm
+
+div
+    background-size: cover
+
+///////////////////////////////////////////////////////////////////////////////
+// HEADER                                                                    //
+///////////////////////////////////////////////////////////////////////////////
+
+.header
+    &__main
+        width: 100%
+
+    &__action
+        display: flex
+        justify-content: flex-end
+        margin-bottom: $margin-md
+
+    &__quote
+        align-items: center
+        display: flex
+        flex-direction: column
+
+    &__call
+        color: $color-primary
+        margin-left: $margin-md
+        margin-right: $margin-sm
+        text-align: center
+
+        img
+            display: inline-block
+            margin-right: $margin-sm
+
+    &__phone
+        display: inline-block
+
+    &__heading
+        @extend %font-header-heading
+        color: $color-black
+        font-size: $font-size-header-heading
+        text-align: center
+
+    &__menu
+        font-size: $font-size-header-menu
+
+        .nav-item
+            @extend %skew
+            border-right: 1px solid $color-primary
+            padding: 5px 10px
+            transition: .3s ease background-color
+
+            &:last-of-type
+                border: 0
+
+            &.active,
+            &:hover
+                background-color: $color-primary
+
+                .nav-link
+                    color: $color-white
+
+        .nav-link
+            @extend %skew-back
+            color: $color-black
+
+    &__announcement
+        @extend %font-announcement
+        background-color: $color-secondary
+        color: $color-white
+        font-size: $font-size-header-menu
+        margin-top: $margin-sm
+        padding: 15px
+        text-align: center
+        width: 100%
+
+        p
+            margin-bottom: 0
+
+
+///////////////////////////////////////////////////////////////////////////////
+// CONTENT - REUSABLE                                                        //
+///////////////////////////////////////////////////////////////////////////////
+
+.btn
+    @extend %font-btn
+    border: 1px solid transparent
+    border-radius: 5px
+    color: $color-white
+    font-size: $font-size-btn
+    padding: 5px 10px
+
+.btn-primary
+    background-color: $color-primary
+
+    &:hover
+        background-color: $color-white
+        border: 1px solid $color-primary
+        color: $color-primary
+
+.btn-secondary
+    background-color: transparent
+    border: 1px solid $color-white
+
+    &:hover
+        background-color: $color-primary
+        border: 1px solid $color-primary
+
+.side-borders
+    @extend %skew
+    border-left: 2px solid $color-primary
+    border-right: 2px solid $color-primary
+
+span
+    &.side-borders
+        display: inline-block
+
+.section
+    padding: 30px 0
+    position: relative
+
+    &__heading
+        display: inline-block
+        left: 50%
+        padding: 0 30px
+        position: relative
+        text-align: center
+        transform: translateX(-50%)
+
+        &::after
+            border-left: 2px solid $color-primary
+            border-right: 2px solid $color-primary
+            content: ' '
+            height: 100%
+            left: 0
+            position: absolute
+            top: 0
+            transform: skew(-20deg)
+            width: 100%
+
+    &--background
+        padding: 0
+
+.dark-overlay
+    background-color: rgba(0, 0, 0, .4)
+    color: $color-white
+    content: ' '
+    height: 100%
+    left: 0
+    padding: 30px 0
+    top: 0
+    width: 100%
+
+.carousel
+    &-indicators
+        li
+            background-color: transparent
+            border: 3px solid $color-light-grey
+            border-radius: 50%
+            height: 15px
+            width: 15px
+
+        & .active
+            background-color: $color-primary
+
+.img-center
+    display: block
+    margin: 0 auto
+
+.fine-print
+    font-size: $font-size-fine-print
+
+.slash-separator
+    margin: $margin-md 0
+    text-align: center
+
+///////////////////////////////////////////////////////////////////////////////
+// HOME                                                                      //
+///////////////////////////////////////////////////////////////////////////////
+
+.home-hero
+    height: 85vh
+    position: relative
+    z-index: 0
+
+    .carousel
+        height: 100%
+        overflow: hidden
+
+        &-inner
+            height: 100%
+
+        &-item
+            background-size: cover
+            height: 100%
+
+            &::after
+                background-image: radial-gradient($color-carousel-shade, transparent)
+                content: ' '
+                height: 100%
+                left: 0
+                position: absolute
+                top: 0
+                width: 100%
+                z-index: 0
+
+        &-indicators
+            li
+                border: 3px solid $color-white
+
+            & .active
+                background-color: $color-white
+
+        &-caption
+            @extend %font-carousel
+            align-items: center
+            display: flex
+            flex-direction: column
+            font-size: $font-size-carousel-text
+            height: 100%
+            justify-content: center
+            left: 300px
+            right: 300px
+
+        &__heading
+            font-size: $font-size-carousel-heading
+
+        &__subheading
+            font-size: $font-size-carousel-subheading
+
+        &__btn
+            bottom: 10%
+            position: absolute
+
+        &-sidebar
+            align-items: center
+            background-color: $color-carousel-sidebar-shade
+            color: $color-white
+            display: flex
+            flex-direction: column
+            justify-content: center
+            padding: 30px
+            position: absolute
+            right: $margin-md
+            text-align: center
+            top: 50%
+            transform: translateY(-50%)
+            width: 250px
+            z-index: 9
+
+            .discount
+                align-items: center
+                background-color: $color-white
+                color: $color-black
+                display: flex
+                height: 50px
+                justify-content: center
+                margin: $margin-md 0
+                padding: 5px 10px
+                position: relative
+                width: 100%
+
+                &__flag
+                    height: 50px
+                    left: -50px
+                    position: absolute
+                    top: 0
+                    width: 0
+
+                    &::before,
+                    &::after
+                        border-left: 50px solid transparent
+                        content: ' '
+                        height: 0
+                        left: 0
+                        position: absolute
+                        width: 0
+
+                    &::before
+                        border-top: 25px solid $color-white
+                        top: 0
+
+                    &::after
+                        border-bottom: 25px solid $color-white
+                        bottom: 0
+
+
+            h2
+                font-size: $font-size-carousel-sidebar-heading
+
+.promotions
+    &__header
+        background-color: $color-dark
+        color: $color-white
+        text-align: center
+        width: 100%
+
+        h2
+            font-size: $font-size-subheading
+
+    &__subheading
+        @extend %skew-back
+        display: inline-block
+        font-size: $font-size-heading
+        padding: 0 30px
+
+    &__arrow
+        background: $color-light-grey
+        border-radius: 50%
+        height: 50px
+        margin: 0 auto
+        position: relative
+        width: 50px
+
+        &::after
+            border-bottom: 4px solid $color-white
+            border-right: 4px solid $color-white
+            content: ' '
+            height: 20px
+            left: 50%
+            position: absolute
+            top: 50%
+            transform: translate(-50%, -60%) rotate(45deg)
+            width: 20px
+
+    &__title
+        font-size: $font-size-promotion-title
+
+.services
+    font-size: $font-size-services-title
+    text-align: center
+
+    &__image-wrapper
+        margin-bottom: $margin-sm
+        position: relative
+
+        &::after
+            background-color: $color-services-shade
+            content: ' '
+            height: 100%
+            left: 0
+            opacity: 0
+            position: absolute
+            top: 0
+            transition: .3s ease opacity
+            width: 100%
+            z-index: 1
+
+    &__icon
+        left: 50%
+        opacity: 0
+        position: absolute
+        top: 50%
+        transform: translate(-50%, -50%)
+        transition: .3s ease opacity
+        z-index: 2
+
+    &__image
+        z-index: 0
+
+    &__title
+        font-size: $font-size-services-title
+
+    &__service:hover
+        text-decoration: none
+
+        .services
+            &__icon
+                opacity: 1
+
+            &__image-wrapper::after
+                opacity: .5
+
+    a
+        color: $color-black
+
+.checklist
+    list-style-image: url('images/check.png');
+
+.reviews
+    &__heading
+        color: $color-reviews-section
+        margin-top: $margin-lg
+
+    .carousel
+        &__reviewer
+            margin-bottom: $margin-lg
+            text-align: right
+
+        &-indicators
+            .active
+                background-color: $color-reviews-section
+
+.home-contact
+    position: relative
+
+    &__heading
+        color: $color-primary
+        margin-top: $margin-sm
+        position: absolute
+        text-align: center
+        width: 100%
+
+    &__info
+        background-color: rgba(255, 255, 255, .8)
+        color: $color-black
+        left: $margin-md
+        padding: 15px
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+
+    &__map
+        width: 100%
+
+///////////////////////////////////////////////////////////////////////////////
+// FOOTER                                                                    //
+///////////////////////////////////////////////////////////////////////////////
+
+footer
+    background-color: $color-dark
+    color: $color-white
+    padding: 30px
+
+    .navbar
+        justify-content: flex-end
+
+    .navbar-nav
+        flex-direction: row
+        float: right
+        margin-bottom: $margin-lg
+
+    .nav-item
+        @extend %skew-back
+        margin: 0 $margin-sm
+
+    .nav-link
+        color: $color-white
+
+.copyright
+    font-size: $font-size-copyright
+    text-align: center
+    width: 100%
+
+    &__separator
+        color: $color-primary
+
+.footer
+    &__social
+        font-size: 20px
+
+        a
+            color: $color-black
+
+            &:hover
+                color: $color-secondary
 
