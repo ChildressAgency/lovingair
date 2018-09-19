@@ -56,7 +56,7 @@
                                     <div class="dropdown-menu">
                                         <a href="<?php echo esc_url( home_url( 'heating-services' ) ); ?>" class="dropdown-item">Heating Services</a>
                                         <a href="<?php echo esc_url( home_url( 'air-conditioning-services' ) ); ?>" class="dropdown-item">Air Conditioning Services</a>
-                                        <a href="<?php echo esc_url( home_url( 'customer-service-loyalty-agreement' ) ); ?>" class="dropdown-item">Customer Service Loyalty Agreement</a>
+                                        <a href="<?php echo esc_url( home_url( 'customer-loyalty-service-agreement' ) ); ?>" class="dropdown-item">Customer Loyalty Service Agreement</a>
                                     </div>
                                 </li>
                                 <li class="nav-item <?php if( is_page( 'commercial-services' ) ){ echo 'active'; } ?>"><a href="<?php echo esc_url( home_url( 'commercial-services' ) ); ?>" class="nav-link">COMMERCIAL SERVICES</a></li>
