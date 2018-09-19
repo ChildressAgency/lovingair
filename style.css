@@ -34,7 +34,7 @@ h6 {
   transform: skew(-20deg);
 }
 
-footer .nav-item, .promotions__subheading, .header__menu .nav-link {
+footer .nav-item, .promotions__subheading, .navbar-expand-lg .navbar-nav .dropdown-menu, .header__menu .nav-link {
   transform: skew(20deg);
 }
 
@@ -138,7 +138,9 @@ ul li {
 .header__menu .nav-item {
   border-right: 1px solid #cb0009;
   padding: 5px 10px;
+  position: relative;
   transition: 0.3s ease background-color;
+  z-index: 999;
 }
 .header__menu .nav-item:last-of-type {
   border: 0;
@@ -170,6 +172,19 @@ ul li {
 }
 .page-header h1 {
   margin-bottom: 0;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  background-color: #1f1f1f;
+  font-size: 18px;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu a {
+  color: #fff;
+  margin: 7px 0;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu a:hover {
+  background-color: transparent;
+  color: #cb0009;
 }
 
 .btn {
@@ -398,7 +413,6 @@ span.side-borders {
 .promotions__header {
   background-color: #1f1f1f;
   color: #fff;
-  text-align: center;
   width: 100%;
 }
 .promotions__header h2 {

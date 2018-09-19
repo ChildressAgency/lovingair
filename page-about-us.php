@@ -2,7 +2,7 @@
 
     <div class="page-header" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/about-hero.png');">
         <div class="dark-overlay">
-            <h1>About Us</h1>
+            <h1><?php the_title(); ?></h1>
         </div>
     </div>
 
