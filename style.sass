@@ -37,11 +37,17 @@ h6
     @extend %font-heading
     margin-bottom: $margin-md
 
+h1
+    font-size: $font-size-page-heading
+
 h2
     font-size: $font-size-heading
 
 h3
     font-size: $font-size-subheading
+
+h4
+    font-size: $font-size-small-heading
 
 p
     line-height: 1.5
@@ -49,6 +55,16 @@ p
 
 div
     background-size: cover
+
+img
+    max-width: 100%
+
+ul
+    list-style-type: none
+    margin-bottom: $margin-md
+
+    li
+        margin-bottom: $margin-sm
 
 ///////////////////////////////////////////////////////////////////////////////
 // HEADER                                                                    //
@@ -123,6 +139,12 @@ div
         p
             margin-bottom: 0
 
+.page-header
+    text-align: center
+
+    h1
+        margin-bottom: 0
+
 
 ///////////////////////////////////////////////////////////////////////////////
 // CONTENT - REUSABLE                                                        //
@@ -166,6 +188,15 @@ span
     position: relative
 
     &__heading
+        margin-bottom: $margin-md
+
+        h3
+            text-align: center
+
+        & > *
+            margin: 0
+
+    h2
         display: inline-block
         left: 50%
         padding: 0 30px
@@ -186,6 +217,11 @@ span
 
     &--background
         padding: 0
+
+    &::after
+        clear: both
+        content: ' '
+        display: table
 
 .dark-overlay
     background-color: rgba(0, 0, 0, .4)
@@ -219,6 +255,9 @@ span
 .slash-separator
     margin: $margin-md 0
     text-align: center
+
+.big-text
+    font-size: $font-size-big-text
 
 ///////////////////////////////////////////////////////////////////////////////
 // HOME                                                                      //

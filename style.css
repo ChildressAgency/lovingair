@@ -64,12 +64,20 @@ h6 {
   margin-bottom: 30px;
 }
 
+h1 {
+  font-size: 60px;
+}
+
 h2 {
   font-size: 50px;
 }
 
 h3 {
   font-size: 40px;
+}
+
+h4 {
+  font-size: 32px;
 }
 
 p {
@@ -79,6 +87,18 @@ p {
 
 div {
   background-size: cover;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 30px;
+}
+ul li {
+  margin-bottom: 15px;
 }
 
 .header__main {
@@ -145,6 +165,13 @@ div {
   margin-bottom: 0;
 }
 
+.page-header {
+  text-align: center;
+}
+.page-header h1 {
+  margin-bottom: 0;
+}
+
 .btn {
   border: 1px solid transparent;
   border-radius: 5px;
@@ -185,6 +212,15 @@ span.side-borders {
   position: relative;
 }
 .section__heading {
+  margin-bottom: 30px;
+}
+.section__heading h3 {
+  text-align: center;
+}
+.section__heading > * {
+  margin: 0;
+}
+.section h2 {
   display: inline-block;
   left: 50%;
   padding: 0 30px;
@@ -192,7 +228,7 @@ span.side-borders {
   text-align: center;
   transform: translateX(-50%);
 }
-.section__heading::after {
+.section h2::after {
   border-left: 2px solid #cb0009;
   border-right: 2px solid #cb0009;
   content: " ";
@@ -205,6 +241,11 @@ span.side-borders {
 }
 .section--background {
   padding: 0;
+}
+.section::after {
+  clear: both;
+  content: " ";
+  display: table;
 }
 
 .dark-overlay {
@@ -241,6 +282,10 @@ span.side-borders {
 .slash-separator {
   margin: 30px 0;
   text-align: center;
+}
+
+.big-text {
+  font-size: 24px;
 }
 
 .home-hero {

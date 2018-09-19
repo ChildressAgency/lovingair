@@ -49,7 +49,11 @@
 
     <div class="promotions">
         <div class="promotions__header section">
-            <h2>Check Out Our<br/><span class="side-borders"><span class="promotions__subheading">Special Promotions!</span></span></h2>
+            <div class="section__heading">
+                <h3>Check Out Our</h3>
+                <h2>Special Promotions</h2>
+            </div>
+            <!-- <h2>Check Out Our<br/><span class="side-borders"><span class="promotions__subheading">Special Promotions!</span></span></h2> -->
             <div class="promotions__arrow"></div>
         </div>
         <div class="promotions__content container section">
@@ -73,7 +77,7 @@
     <div class="slash-separator"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slash-separator.png"></div>
 
     <div class="section container">
-        <h2 class="section__heading" >Our Services</h2>
+        <h2>Our Services</h2>
         <p>Whether it’s summer or winter, keep your home or business at a comfortable temperature. Our team of friendly technicians can find a heating or cooling solution that suits your needs. We offer comprehensive maintenance programs to ensure that your heating and cooling systems perform efficiently all year round.</p>
 
         <div class="row services section">
@@ -167,7 +171,7 @@
     </div>
 
     <div class="section container">
-        <h2 class="section__heading">Our Guarantee</h2>
+        <h2>Our Guarantee</h2>
         <p>Loving Air Inc. is a premier provider of heating and cooling services for residents and businesses in the Fredericksburg, Spotsylvania, Stafford, King George, Culpeper, Orange, Locust Grove, Lake Anna, and surrounding areas. We pay attention to detail and will make sure each customer is completely satisfied.</p>
         <p>Participating business in Rappahannock Electric Cooperative Co-op Connection Program.</p>
         <img class="img-center" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rappahannock-electric-cooperative-logo.png">
@@ -178,7 +182,7 @@
     <div class="section container">
         <div class="row">
             <div class="col-6">
-                <h2 class="section__heading">Financing Available</h2>
+                <h2>Financing Available</h2>
                 <p>We offer Same-As-Cash financing with no payments and no interest for 18 months!* Apply now through EnerBank USA</p>
                 <p class="fine-print">*Loans provided by EnerBank USA, Member FDIC, (1245 Brickyard Rd., Suite 600, Salt Lake City, UT 84106) on approved credit, for a limited time. Repayment terms vary from 24 to 132 months. Interest waived if repaid in 365 days. 18.10% fixed APR, effective as of September 1, 2018, subject to change. Interest starts accruing when the loan closes.</p>
             </div>
