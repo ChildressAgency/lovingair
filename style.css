@@ -22,11 +22,11 @@ h6 {
   font-family: "Encode Sans", sans-serif;
 }
 
-.home-hero .carousel-caption, body {
+.home-hero .carousel-caption {
   font-family: "Helvetica Neue", sans-serif;
 }
 
-.header__announcement {
+.header__announcement, body {
   font-family: "Helvetica Neue Light", sans-serif;
 }
 
@@ -70,6 +70,7 @@ h1 {
 
 h2 {
   font-size: 50px;
+  font-weight: bold;
 }
 
 h3 {
@@ -78,6 +79,10 @@ h3 {
 
 h4 {
   font-size: 32px;
+}
+
+h5 {
+  font-size: 26px;
 }
 
 p {
@@ -99,6 +104,10 @@ ul {
 }
 ul li {
   margin-bottom: 15px;
+}
+
+a {
+  color: #cb0009;
 }
 
 .header__main {
@@ -229,7 +238,10 @@ span.side-borders {
 .section__heading {
   margin-bottom: 30px;
 }
-.section__heading h3 {
+.section__heading h3,
+.section__heading h4,
+.section__heading h5,
+.section__heading h6 {
   text-align: center;
 }
 .section__heading > * {
@@ -256,6 +268,10 @@ span.side-borders {
 }
 .section--background {
   padding: 0;
+}
+.section--thin {
+  margin: 0 auto;
+  max-width: 80%;
 }
 .section::after {
   clear: both;
