@@ -57,6 +57,10 @@ p
     line-height: 1.5
     margin-bottom: $margin-sm
 
+    &.side-borders
+        display: inline-block
+        margin: 0 auto
+
 div
     background-size: cover
 
@@ -201,6 +205,13 @@ a
     @extend %skew
     border-left: 2px solid $color-primary
     border-right: 2px solid $color-primary
+    display: inline-block
+
+    p
+        @extend %skew-back
+        display: inline-block
+        margin-bottom: 0
+        padding: 0 15px
 
 span
     &.side-borders
@@ -219,27 +230,26 @@ span
         h6
             text-align: center
 
+        h2
+            display: inline-block
+            left: 50%
+            padding: 0 30px
+            position: relative
+            transform: translateX(-50%)
+
+            &::after
+                border-left: 2px solid $color-primary
+                border-right: 2px solid $color-primary
+                content: ' '
+                height: 100%
+                left: 0
+                position: absolute
+                top: 0
+                transform: skew(-20deg)
+                width: 100%
+
         & > *
             margin: 0
-
-    h2
-        display: inline-block
-        left: 50%
-        padding: 0 30px
-        position: relative
-        text-align: center
-        transform: translateX(-50%)
-
-        &::after
-            border-left: 2px solid $color-primary
-            border-right: 2px solid $color-primary
-            content: ' '
-            height: 100%
-            left: 0
-            position: absolute
-            top: 0
-            transform: skew(-20deg)
-            width: 100%
 
     &--background
         padding: 0

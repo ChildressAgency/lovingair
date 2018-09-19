@@ -34,7 +34,7 @@ h6 {
   transform: skew(-20deg);
 }
 
-footer .nav-item, .promotions__subheading, .navbar-expand-lg .navbar-nav .dropdown-menu, .header__menu .nav-link {
+footer .nav-item, .promotions__subheading, .side-borders p, .navbar-expand-lg .navbar-nav .dropdown-menu, .header__menu .nav-link {
   transform: skew(20deg);
 }
 
@@ -88,6 +88,10 @@ h5 {
 p {
   line-height: 1.5;
   margin-bottom: 15px;
+}
+p.side-borders {
+  display: inline-block;
+  margin: 0 auto;
 }
 
 div {
@@ -225,6 +229,12 @@ a {
 .side-borders {
   border-left: 2px solid #cb0009;
   border-right: 2px solid #cb0009;
+  display: inline-block;
+}
+.side-borders p {
+  display: inline-block;
+  margin-bottom: 0;
+  padding: 0 15px;
 }
 
 span.side-borders {
@@ -244,18 +254,14 @@ span.side-borders {
 .section__heading h6 {
   text-align: center;
 }
-.section__heading > * {
-  margin: 0;
-}
-.section h2 {
+.section__heading h2 {
   display: inline-block;
   left: 50%;
   padding: 0 30px;
   position: relative;
-  text-align: center;
   transform: translateX(-50%);
 }
-.section h2::after {
+.section__heading h2::after {
   border-left: 2px solid #cb0009;
   border-right: 2px solid #cb0009;
   content: " ";
@@ -265,6 +271,9 @@ span.side-borders {
   top: 0;
   transform: skew(-20deg);
   width: 100%;
+}
+.section__heading > * {
+  margin: 0;
 }
 .section--background {
   padding: 0;

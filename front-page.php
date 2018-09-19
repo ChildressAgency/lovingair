@@ -77,7 +77,10 @@
     <div class="slash-separator"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slash-separator.png"></div>
 
     <div class="section container">
-        <h2>Our Services</h2>
+        <div class="section__heading">
+            <h2>Our Services</h2>
+        </div>
+
         <p>Whether it’s summer or winter, keep your home or business at a comfortable temperature. Our team of friendly technicians can find a heating or cooling solution that suits your needs. We offer comprehensive maintenance programs to ensure that your heating and cooling systems perform efficiently all year round.</p>
 
         <div class="row services section">
@@ -171,7 +174,10 @@
     </div>
 
     <div class="section container">
-        <h2>Our Guarantee</h2>
+        <div class="section__heading">
+            <h2>Our Guarantee</h2>
+        </div>
+
         <p>Loving Air Inc. is a premier provider of heating and cooling services for residents and businesses in the Fredericksburg, Spotsylvania, Stafford, King George, Culpeper, Orange, Locust Grove, Lake Anna, and surrounding areas. We pay attention to detail and will make sure each customer is completely satisfied.</p>
         <p>Participating business in Rappahannock Electric Cooperative Co-op Connection Program.</p>
         <img class="img-center" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rappahannock-electric-cooperative-logo.png">
@@ -182,7 +188,10 @@
     <div class="section container">
         <div class="row">
             <div class="col-6">
-                <h2>Financing Available</h2>
+                <div class="section__heading">
+                    <h2>Financing Available</h2>
+                </div>
+                
                 <p>We offer Same-As-Cash financing with no payments and no interest for 18 months!* Apply now through EnerBank USA</p>
                 <p class="fine-print">*Loans provided by EnerBank USA, Member FDIC, (1245 Brickyard Rd., Suite 600, Salt Lake City, UT 84106) on approved credit, for a limited time. Repayment terms vary from 24 to 132 months. Interest waived if repaid in 365 days. 18.10% fixed APR, effective as of September 1, 2018, subject to change. Interest starts accruing when the loan closes.</p>
             </div>

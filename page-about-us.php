@@ -22,14 +22,14 @@
             <p>We believe in taking the time to do the job right the first time, we do not believe in cutting corners or doing sloppy work to save a buck. We treat each job as if it were going to be done in our own home, and our technicians are very professional and respectful. We are a licensed Amana and Trane dealer but work on all makes and models.</p>
             <img class="float-right" src="<?php echo get_stylesheet_directory_uri(); ?>/images/about-2.png">
             <p>We take the time to explain what is going on with the system and what our plan is to fix the problems with the customer. We always get the customers approval before the work is performed. We strive to meet and exceed our customer’s needs. As our motto states:</p>
-            <p class="big-text">You Won't Like Us, You'll Love Us!</p>
+            <h5>You Won't Like Us, You'll Love Us!</h5>
             <a href="#" class="btn btn-primary">Meet Our Team</a>
             <div class="clearfix"></div>
         </div>
         
         <div class="slash-separator"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slash-separator.png"></div>
 
-        <div class="section">
+        <div class="section section--thin">
             <div class="section__heading">
                 <h2>Satisfaction Guaranteed</h2>
                 <h3 class="text-center">Fully Licensed and Insured HVAC Specialists</h3>
