@@ -9,7 +9,7 @@
 //                                                                 //
 /////////////////////////////////////////////////////////////////////
 
-// sass-lint:disable function-name-format force-pseudo-nesting
+// sass-lint:disable function-name-format force-pseudo-nesting nesting-depth
 @import _variables.sass
 
 
@@ -37,18 +37,45 @@ h6
     @extend %font-heading
     margin-bottom: $margin-md
 
+h1
+    font-size: $font-size-page-heading
+
 h2
     font-size: $font-size-heading
+    font-weight: bold
 
 h3
     font-size: $font-size-subheading
+
+h4
+    font-size: $font-size-small-heading
+
+h5
+    font-size: $font-size-smaller-heading
 
 p
     line-height: 1.5
     margin-bottom: $margin-sm
 
+    &.side-borders
+        display: inline-block
+        margin: 0 auto
+
 div
     background-size: cover
+
+img
+    max-width: 100%
+
+ul
+    list-style-type: none
+    margin-bottom: $margin-md
+
+    li
+        margin-bottom: $margin-sm
+
+a
+    color: $color-primary
 
 ///////////////////////////////////////////////////////////////////////////////
 // HEADER                                                                    //
@@ -94,7 +121,9 @@ div
             @extend %skew
             border-right: 1px solid $color-primary
             padding: 5px 10px
+            position: relative
             transition: .3s ease background-color
+            z-index: 999
 
             &:last-of-type
                 border: 0
@@ -123,6 +152,26 @@ div
         p
             margin-bottom: 0
 
+.page-header
+    text-align: center
+
+    h1
+        margin-bottom: 0
+
+.navbar-expand-lg
+    .navbar-nav
+        .dropdown-menu
+            @extend %skew-back
+            background-color: $color-dark
+            font-size: $font-size-header-dropdown
+
+            a
+                color: $color-white
+                margin: $margin-xs 0
+
+                &:hover
+                    background-color: transparent
+                    color: $color-primary
 
 ///////////////////////////////////////////////////////////////////////////////
 // CONTENT - REUSABLE                                                        //
@@ -156,6 +205,13 @@ div
     @extend %skew
     border-left: 2px solid $color-primary
     border-right: 2px solid $color-primary
+    display: inline-block
+
+    p
+        @extend %skew-back
+        display: inline-block
+        margin-bottom: 0
+        padding: 0 15px
 
 span
     &.side-borders
@@ -166,26 +222,46 @@ span
     position: relative
 
     &__heading
-        display: inline-block
-        left: 50%
-        padding: 0 30px
-        position: relative
-        text-align: center
-        transform: translateX(-50%)
+        margin-bottom: $margin-md
 
-        &::after
-            border-left: 2px solid $color-primary
-            border-right: 2px solid $color-primary
-            content: ' '
-            height: 100%
-            left: 0
-            position: absolute
-            top: 0
-            transform: skew(-20deg)
-            width: 100%
+        h3,
+        h4,
+        h5,
+        h6
+            text-align: center
+
+        h2
+            display: inline-block
+            left: 50%
+            padding: 0 30px
+            position: relative
+            transform: translateX(-50%)
+
+            &::after
+                border-left: 2px solid $color-primary
+                border-right: 2px solid $color-primary
+                content: ' '
+                height: 100%
+                left: 0
+                position: absolute
+                top: 0
+                transform: skew(-20deg)
+                width: 100%
+
+        & > *
+            margin: 0
 
     &--background
         padding: 0
+
+    &--thin
+        margin: 0 auto
+        max-width: 80%
+
+    &::after
+        clear: both
+        content: ' '
+        display: table
 
 .dark-overlay
     background-color: rgba(0, 0, 0, .4)
@@ -212,6 +288,10 @@ span
 .img-center
     display: block
     margin: 0 auto
+
+.img-bottom
+    margin-top: -30%
+    width: 100%
 
 .fine-print
     font-size: $font-size-fine-print
@@ -338,7 +418,6 @@ span
     &__header
         background-color: $color-dark
         color: $color-white
-        text-align: center
         width: 100%
 
         h2
