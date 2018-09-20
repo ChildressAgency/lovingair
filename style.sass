@@ -26,7 +26,7 @@ html
 body
     @extend %font-body
     box-sizing: border-box
-    font-size: 1.6rem
+    font-size: $font-size-body
 
 h1,
 h2,
@@ -222,7 +222,7 @@ span
     position: relative
 
     &__heading
-        margin-bottom: $margin-md
+        margin-bottom: $margin-xl
 
         h3,
         h4,
@@ -537,6 +537,55 @@ span
 
     &__map
         width: 100%
+
+///////////////////////////////////////////////////////////////////////////////
+// CONTACT                                                                   //
+///////////////////////////////////////////////////////////////////////////////
+
+.contact
+    &__form
+        margin: 0 auto
+        text-align: center
+        width: 80%
+
+    &__input
+        display: flex
+        width: 100%
+
+        label
+            margin: 0
+            padding: 7px 0
+            position: absolute
+            transform: translateX(-80px)
+
+        span
+            margin-bottom: 15px
+            margin-left: auto
+            width: 100%
+
+    &__side-images
+        align-items: flex-end
+        display: flex
+        justify-content: space-between
+        position: absolute
+        width: 100%
+
+    &__captcha
+        display: inline-block
+        margin: $margin-md 0
+
+    &__submit
+        padding: 5px 30px
+
+    .btn
+        margin: $margin-md 0
+
+.form-control
+    border-color: $color-light-grey
+    border-radius: 0
+    font-size: $font-size-body
+    padding: 5px 15px
+
 
 ///////////////////////////////////////////////////////////////////////////////
 // FOOTER                                                                    //
