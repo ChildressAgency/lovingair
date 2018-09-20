@@ -58,4 +58,10 @@
 		wp_enqueue_style('font-awesome', '//use.fontawesome.com/releases/v5.3.1/css/all.css');
 	}
 	add_action('wp_enqueue_scripts','load_font_awesome');
+
+	// Register Navigation Menus
+	register_nav_menus( array(
+		'header_menu' => 'Header Menu',
+		'footer_menu' => 'Footer Menu'
+	) );
 ?>
