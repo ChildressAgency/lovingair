@@ -13,7 +13,7 @@
            </ul>
        </nav>
 
-       <p class="copyright">&copy; 2018 Loving Air Inc. <span class="copyright__separator">/</span> Website designed by the Childress Agency<br/>Terms of Use <span class="copyright__separator">/</span> Privacy Policy</p>
+       <p class="copyright"><?php the_field( 'copyright_text', 'options' ); ?></p>
     </footer>
     
     <?php wp_footer(); ?>
