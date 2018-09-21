@@ -75,45 +75,48 @@
 
 	    function start_el(&$output, $item, $depth = 0, $args = array(), $current_object_id = 0) {
 	        global $post;
-	        $pageID = $post->ID;
-	        $object = $item->object;
-			$type = $item->type;
-			$title = $item->title;
-			$objectID = $item->object_id;
-			$description = $item->description;
-			$permalink = $item->url;
-			$hasChildren = in_array( 'has-children', $item->classes );
-			$parent = $item->menu_item_parent;
+	        $pageID = $post->ID; // id of current page
+			$title = $item->title; // title of menu item
+			$objectID = $item->object_id; // page id of menu item
+			$permalink = $item->url; // link of menu item
+			$hasChildren = in_array( 'has-children', $item->classes ); // whether the menu item has children
+			$parent = $item->menu_item_parent; // the parent of the current menu item
 
+			// if the current menu item has a parent, then it is a dropdown item
 			if( $parent ){
 				$output .= "<a class=\"dropdown-item\" href=\"" . $permalink . "\">";
 				$output .= $title;
 				$output .= "</a>";
 			} else {
 				$output .= "<li class=\"nav-item";
+
+				// if this item has children, then it is a dropdown menu
 				if( $hasChildren )
 					$output .= " dropdown";
+
+				// if this item goes to this page, then highlight it
 				if( $objectID == $pageID )
 					$output .= " active";
+
+				// close the tag
 				$output .= "\">";
 
 
+				// if this item is a dropdown menu, it needs some extra info
 				if( $hasChildren ){
-					$output .= "<a href=\"#\" class=\"nav-link dropdown-toggle";
-
-					$output .= "\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\">";
+					$output .= "<a href=\"#\" class=\"nav-link dropdown-toggle\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"true\">";
 				}
 				else{
-					$output .= "<a href=\"" . $permalink . "\" class=\"nav-link";
-
-					$output .= "\">";
+					$output .= "<a href=\"" . $permalink . "\" class=\"nav-link\">";
 				}
 
+				// item title and close the tag
 				$output .= $title;
 				$output .= "</a>";
 			}
 		}
 
+		// same as the default function, except the class is 'dropdown-menu' instead of 'sub-menu'
 		function start_lvl( &$output, $depth = 0, $args = array() ){
 			if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
 			        $t = '';
