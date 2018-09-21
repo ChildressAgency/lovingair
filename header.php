@@ -40,7 +40,7 @@
                         <div class="header__call">
                             <p class="header__heading">Call Us!</p>
                             <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/images/phone.png">
-                            <p class="header__phone">(540) 399-1300</p>
+                            <p class="header__phone"><?php the_field( 'phone', 'options' ); ?></p>
                         </div>
                     </div>
                     <div class="header__menu">
@@ -48,9 +48,25 @@
                             <i class="fas fa-bars"></i>
                         </button>
                         <div class="collapse navbar-collapse">
-                            <ul class="navbar-nav ml-auto">
+                            <?php 
+                            wp_nav_menu( array(
+                                'theme_location'    =>  'header_menu',
+                                'menu_class'        =>  'navbar-nav',
+                                'walker'            =>  new Custom_Nav_Walker()
+                            ) ); ?>
+
+
+                            <!-- <ul class="navbar-nav ml-auto">
                                 <li class="nav-item <?php if( is_front_page() ){ echo 'active'; } ?>"><a href="<?php echo esc_url( home_url() ); ?>" class="nav-link">HOME</a></li>
-                                <li class="nav-item <?php if( is_page( 'about-us' ) ){ echo 'active'; } ?>"><a href="<?php echo esc_url( home_url( 'about-us' ) ); ?>" class="nav-link">ABOUT US</a></li>
+                                <li class="nav-item dropdown <?php if( is_page( 'about-us' ) ){ echo 'active'; } ?>">
+                                    <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">ABOUT US</a>
+                                    <div class="dropdown-menu">
+                                        <a href="<?php echo esc_url( home_url( 'about-us' ) ); ?>" class="dropdown-item">About Us</a>
+                                        <a href="<?php echo esc_url( home_url( 'our-team' ) ); ?>" class="dropdown-item">Our Team</a>
+                                        <a href="<?php echo esc_url( home_url( 'why-choose-loving-air-inc' ) ); ?>" class="dropdown-item">Why Choose Loving Air Inc</a>
+                                        <a href="<?php echo esc_url( home_url( 'community-events' ) ); ?>" class="dropdown-item">Community Events</a>
+                                    </div>
+                                </li>
                                 <li class="nav-item dropdown <?php if( is_page( 'hvac-services' ) ){ echo 'active'; } ?>">
                                     <a href="<?php echo esc_url( home_url( 'hvac-services' ) ); ?>" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">HVAC SERVICES</a>
                                     <div class="dropdown-menu">
@@ -61,7 +77,7 @@
                                 </li>
                                 <li class="nav-item <?php if( is_page( 'commercial-services' ) ){ echo 'active'; } ?>"><a href="<?php echo esc_url( home_url( 'commercial-services' ) ); ?>" class="nav-link">COMMERCIAL SERVICES</a></li>
                                 <li class="nav-item <?php if( is_page( 'contact-us' ) ){ echo 'active'; } ?>"><a href="<?php echo esc_url( home_url( 'contact-us' ) ); ?>" class="nav-link">CONTACT US</a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                 </div>

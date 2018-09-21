@@ -209,13 +209,22 @@
                     <div class="row">
                         <div class="col-6">
                             <p><strong>Hours of Operation</strong></p>
-                            <p>Mon-Fri 7:30 AM to 4:30 PM<br/>After Hours Emergency Services,<br/>Including Saturday & Sunday</p>
+                            <p><?php the_field( 'hours_of_operation', 'options' ); ?></p>
                         </div>
                         <div class="col-6">
                             <p><strong>Location</strong></p>
-                            <p>406 Hudgins Rd<br/>Suite F<br/>Fredericksburg, VA 22408</p>
-                            <p><strong>Phone:</strong> (540) 399-1300</p>
-                            <p><strong>Find us on: </strong><span class="footer__social"><a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i class="fab fa-instagram"></i></a> <a href="#"><i class="fab fa-twitter"></i></a></span></p>
+                            <?php $location = get_field( 'location', 'options' ); ?>
+                            <p><?php echo $location['address_1']; ?><br/><?php echo $location['address_2']; ?><br/><?php echo $location['city_state_zip']; ?></p>
+                            <p><strong>Phone:</strong> <?php the_field( 'phone', 'options' ); ?></p>
+                            <p><strong>Find us on: </strong>
+                                <span class="footer__social">
+                                    <?php if( get_field( 'facebook', 'options' ) ): ?><a href="<?php the_field( 'facebook', 'options' ); ?>"><i class="fab fa-facebook-f"></i></a><?php endif; ?>
+                                    <?php if( get_field( 'twitter', 'options' ) ): ?><a href="<?php the_field( 'twitter', 'options' ); ?>"><i class="fab fa-twitter"></i></a><?php endif; ?>
+                                    <?php if( get_field( 'instagram', 'options' ) ): ?><a href="<?php the_field( 'instagram', 'options' ); ?>"><i class="fab fa-instagram"></i></a><?php endif; ?>
+                                    <?php if( get_field( 'google_plus', 'options' ) ): ?><a href="<?php the_field( 'google_plus', 'options' ); ?>"><i class="fab fa-google-plus-g"></i></a><?php endif; ?>
+                                    <?php if( get_field( 'linkedin', 'options' ) ): ?><a href="<?php the_field( 'linkedin', 'options' ); ?>"><i class="fab fa-linkedin-in"></i></a><?php endif; ?>
+                                </span>
+                            </p>
                         </div>
                     </div>
                 </div>
