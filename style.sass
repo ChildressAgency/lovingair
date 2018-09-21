@@ -53,6 +53,9 @@ h4
 h5
     font-size: $font-size-smaller-heading
 
+h6
+    font-size: $font-size-smallest-heading
+
 p
     line-height: 1.5
     margin-bottom: $margin-sm
@@ -299,6 +302,12 @@ span
 .slash-separator
     margin: $margin-md 0
     text-align: center
+
+.form-control
+    border-color: $color-light-grey
+    border-radius: 0
+    font-size: $font-size-body
+    padding: 5px 15px
 
 ///////////////////////////////////////////////////////////////////////////////
 // HOME                                                                      //
@@ -553,6 +562,7 @@ span
         width: 100%
 
         label
+            font-weight: bold
             margin: 0
             padding: 7px 0
             position: absolute
@@ -580,11 +590,39 @@ span
     .btn
         margin: $margin-md 0
 
-.form-control
-    border-color: $color-light-grey
-    border-radius: 0
-    font-size: $font-size-body
-    padding: 5px 15px
+///////////////////////////////////////////////////////////////////////////////
+// MEMBER DEALS                                                              //
+///////////////////////////////////////////////////////////////////////////////
+
+.membership
+    &__benefits-wrapper
+        align-items: center
+        display: flex
+        justify-content: space-between
+
+    &__benefits
+        font-size: $font-size-member-benefits
+
+        p
+            margin-bottom: 0
+
+        li
+            position: relative
+
+            &::before
+                color: $color-primary
+                content: '*'
+                font-size: $font-size-smaller-heading
+                left: 0
+                position: absolute
+                top: 0
+                transform: translateX(-150%)
+
+    &__partners
+        align-items: center
+        display: flex
+        justify-content: space-around
+        margin: $margin-md 0
 
 
 ///////////////////////////////////////////////////////////////////////////////
