@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <div class="page-header" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/contact-hero.png');">
+    <div class="page-header" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/our-team-hero.png');">
         <div class="dark-overlay">
             <h1><?php the_title(); ?></h1>
         </div>

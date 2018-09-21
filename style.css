@@ -204,6 +204,10 @@ a {
   color: #cb0009;
 }
 
+.menu-header-menu-container {
+  margin-left: auto;
+}
+
 .btn {
   border: 1px solid transparent;
   border-radius: 5px;
@@ -646,6 +650,10 @@ span.side-borders {
 }
 .team__row {
   margin-bottom: 30px;
+}
+
+.examples {
+  display: flex;
 }
 
 footer {
