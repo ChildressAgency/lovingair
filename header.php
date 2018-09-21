@@ -48,14 +48,13 @@
                             <i class="fas fa-bars"></i>
                         </button>
                         <div class="collapse navbar-collapse">
-                            <!-- <ul class="navbar-nav ml-auto"> -->
-                                <?php 
-                                wp_nav_menu( array(
-                                    'theme_location'    =>  'header_menu',
-                                    'menu_class'        =>  'navbar-nav',
-                                    'walker'            =>  new Custom_Nav_Walker()
-                                ) ); ?>
-                            <!-- </ul> -->
+                            <?php 
+                            wp_nav_menu( array(
+                                'theme_location'    =>  'header_menu',
+                                'menu_class'        =>  'navbar-nav',
+                                'walker'            =>  new Custom_Nav_Walker()
+                            ) ); ?>
+
 
                             <!-- <ul class="navbar-nav ml-auto">
                                 <li class="nav-item <?php if( is_front_page() ){ echo 'active'; } ?>"><a href="<?php echo esc_url( home_url() ); ?>" class="nav-link">HOME</a></li>

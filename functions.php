@@ -74,12 +74,12 @@
 	class Custom_Nav_Walker extends Walker_Nav_Menu {
 
 	    function start_el(&$output, $item, $depth = 0, $args = array(), $current_object_id = 0) {
-	        // global $post;
-	        // $pageID = $post->ID;
+	        global $post;
+	        $pageID = $post->ID;
 	        $object = $item->object;
 			$type = $item->type;
 			$title = $item->title;
-			$itemID = $item->ID;
+			$objectID = $item->object_id;
 			$description = $item->description;
 			$permalink = $item->url;
 			$hasChildren = in_array( 'has-children', $item->classes );
@@ -93,7 +93,7 @@
 				$output .= "<li class=\"nav-item";
 				if( $hasChildren )
 					$output .= " dropdown";
-				if( is_page( $itemID ) )
+				if( $objectID == $pageID )
 					$output .= " active";
 				$output .= "\">";
 
