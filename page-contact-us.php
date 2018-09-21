@@ -23,7 +23,8 @@
                                 <p><strong>Address</strong></p>
                             </div>
                             <div class="col-8">
-                                <p>406 Hudgins Rd<br/>Suite F<br/>Fredericksburg, VA 22408</p>
+                                <?php $location = get_field( 'location', 'options' ); ?>
+                                <p><?php echo $location['address_1']; ?><br/><?php echo $location['address_2']; ?><br/><?php echo $location['city_state_zip']; ?></p>
                             </div>
                         </div>
                     </div>
@@ -33,7 +34,7 @@
                                 <p><strong>Phone</strong></p>
                             </div>
                             <div class="col-8">
-                                <p>(540) 399-1300</p>
+                                <p><?php the_field( 'phone', 'options' ); ?></p>
                             </div>
                         </div>
                     </div>

@@ -40,7 +40,7 @@
                         <div class="header__call">
                             <p class="header__heading">Call Us!</p>
                             <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/images/phone.png">
-                            <p class="header__phone">(540) 399-1300</p>
+                            <p class="header__phone"><?php the_field( 'phone', 'options' ); ?></p>
                         </div>
                     </div>
                     <div class="header__menu">
