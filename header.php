@@ -48,11 +48,19 @@
                             <i class="fas fa-bars"></i>
                         </button>
                         <div class="collapse navbar-collapse">
-                            <ul class="navbar-nav ml-auto">
+                            <!-- <ul class="navbar-nav ml-auto"> -->
+                                <?php 
+                                wp_nav_menu( array(
+                                    'theme_location'    =>  'header_menu',
+                                    'menu_class'        =>  'navbar-nav',
+                                    'walker'            =>  new Custom_Nav_Walker()
+                                ) ); ?>
+                            <!-- </ul> -->
+
+                            <!-- <ul class="navbar-nav ml-auto">
                                 <li class="nav-item <?php if( is_front_page() ){ echo 'active'; } ?>"><a href="<?php echo esc_url( home_url() ); ?>" class="nav-link">HOME</a></li>
-                                <!-- <li class="nav-item <?php //if( is_page( 'about-us' ) ){ echo 'active'; } ?>"><a href="<?php //echo esc_url( home_url( 'about-us' ) ); ?>" class="nav-link">ABOUT US</a></li> -->
                                 <li class="nav-item dropdown <?php if( is_page( 'about-us' ) ){ echo 'active'; } ?>">
-                                    <a href="<?php echo esc_url( home_url( 'about-us' ) ); ?>" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">ABOUT US</a>
+                                    <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">ABOUT US</a>
                                     <div class="dropdown-menu">
                                         <a href="<?php echo esc_url( home_url( 'about-us' ) ); ?>" class="dropdown-item">About Us</a>
                                         <a href="<?php echo esc_url( home_url( 'our-team' ) ); ?>" class="dropdown-item">Our Team</a>
@@ -70,7 +78,7 @@
                                 </li>
                                 <li class="nav-item <?php if( is_page( 'commercial-services' ) ){ echo 'active'; } ?>"><a href="<?php echo esc_url( home_url( 'commercial-services' ) ); ?>" class="nav-link">COMMERCIAL SERVICES</a></li>
                                 <li class="nav-item <?php if( is_page( 'contact-us' ) ){ echo 'active'; } ?>"><a href="<?php echo esc_url( home_url( 'contact-us' ) ); ?>" class="nav-link">CONTACT US</a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                 </div>
