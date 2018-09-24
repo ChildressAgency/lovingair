@@ -234,6 +234,11 @@ a {
   border: 1px solid #cb0009;
 }
 
+.btn-center {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
 .side-borders {
   border-left: 2px solid #cb0009;
   border-right: 2px solid #cb0009;
@@ -342,6 +347,13 @@ span.side-borders {
   border-radius: 0;
   font-size: 16px;
   padding: 5px 15px;
+}
+
+.checklist {
+  list-style-image: url("images/check.png");
+}
+.checklist--dark {
+  list-style-image: url("images/check-dark.png");
 }
 
 .home-hero {
@@ -535,10 +547,6 @@ span.side-borders {
   color: #000;
 }
 
-.checklist {
-  list-style-image: url("images/check.png");
-}
-
 .reviews__heading {
   color: #5a5a5a;
   margin-top: 45px;
@@ -654,6 +662,16 @@ span.side-borders {
 
 .examples {
   display: flex;
+}
+.examples__left {
+  background-color: #1f1f1f;
+  color: #fff;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
 }
 
 footer {

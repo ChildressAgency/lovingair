@@ -5,7 +5,12 @@
 // 2. Header                                                       //
 // 3. Content (Reusable)                                           //
 // 4. Home                                                         //
-// 5. Footer                                                       //
+// 5. Contact                                                      //
+// 6. Member Deals                                                 //
+// 7. Our Team                                                     //
+// 8. Why Choose Loving Air Inc                                    //
+// 9. Events                                                       //
+// 10. Footer                                                      //
 //                                                                 //
 /////////////////////////////////////////////////////////////////////
 
@@ -207,6 +212,10 @@ a
         background-color: $color-primary
         border: 1px solid $color-primary
 
+.btn-center
+    margin-left: 50%
+    transform: translateX(-50%)
+
 .side-borders
     @extend %skew
     border-left: 2px solid $color-primary
@@ -311,6 +320,12 @@ span
     border-radius: 0
     font-size: $font-size-body
     padding: 5px 15px
+
+.checklist
+    list-style-image: url('images/check.png');
+
+    &--dark
+        list-style-image: url('images/check-dark.png');
 
 ///////////////////////////////////////////////////////////////////////////////
 // HOME                                                                      //
@@ -511,9 +526,6 @@ span
     a
         color: $color-black
 
-.checklist
-    list-style-image: url('images/check.png');
-
 .reviews
     &__heading
         color: $color-reviews-section
@@ -647,6 +659,15 @@ span
 .examples
     display: flex
 
+    &__left
+        background-color: $color-dark
+        color: $color-white
+        display: flex
+        flex: 1
+        flex-direction: column
+        justify-content: center
+        padding: 30px
+        text-align: center
 
 ///////////////////////////////////////////////////////////////////////////////
 // FOOTER                                                                    //
