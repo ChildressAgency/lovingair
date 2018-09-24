@@ -1,0 +1,157 @@
+// sass-lint:disable nesting-depth
+
+@media screen and (min-width: 576px)
+    h1
+        font-size: $font-size-page-heading
+
+    h2
+        font-size: $font-size-heading
+        font-weight: bold
+
+    h3
+        font-size: $font-size-subheading
+
+    h4
+        font-size: $font-size-small-heading
+
+    h5
+        font-size: $font-size-smaller-heading
+
+    h6
+        font-size: $font-size-smallest-heading
+
+    .header
+        &__action
+            flex-direction: row
+
+        &__quote
+            margin-bottom: 0
+
+    .home-hero
+        .carousel
+            &-sidebar
+                padding: 30px 25%
+
+            &__heading
+                font-size: 50px
+                margin-bottom: 30px
+
+            &__subheading
+                font-size: 26px
+                margin-bottom: 15px
+
+            &-caption
+                p
+                    line-height: 1.5
+
+    .section
+        &__heading
+
+            h2
+                font-size: $font-size-heading
+                padding: 0 30px
+
+            h3
+                font-size: $font-size-subheading
+
+            h4
+                font-size: $font-size-small-heading
+
+            h5
+                font-size: $font-size-smaller-heading
+
+            h6
+                font-size: $font-size-smallest-heading
+
+        p
+            padding: 0
+
+    .promotions
+        &__header
+            font-size: $font-size-subheading
+
+        &__title
+            font-size: $font-size-promotion-title
+            margin-bottom: 30px
+
+        &__excerpt
+            margin-bottom: 15px
+
+@media screen and (min-width: 768px)
+    .home-hero
+        height: 85vh
+
+        .carousel
+            &-inner
+                height: 100%
+
+            &-sidebar
+                padding: 30px
+                position: absolute
+                right: 30px
+                top: 50%
+                transform: translateY(-50%)
+                width: 250px
+
+                .discount
+                    margin: 0
+                    margin-bottom: $margin-sm
+
+            &-caption
+                justify-content: start
+                left: 100px
+                padding-top: 30px
+                right: 350px
+
+    .home-contact
+        &__info
+            left: $margin-md
+            position: absolute
+            text-align: left
+            top: 50%
+            transform: translateY(-50%)
+
+    .promotions
+        &__content
+            text-align: left
+
+    .reviews
+        &__heading
+            text-align: left
+
+
+@media screen and (min-width: 992px)
+    .header
+        height: 85vh
+
+        &__action
+            justify-content: flex-end
+
+        &__menu
+            .nav-item
+                border-right: 1px solid $color-primary
+                text-align: left
+
+                &:last-of-type
+                    border: 0
+
+    .navbar-brand
+        margin: 0
+
+    .home-hero
+        .carousel
+            &__btn
+                bottom: 10%
+
+            &-caption
+                justify-content: center
+                left: 230px
+                right: 320px
+                transform: none
+                width: auto
+
+
+
+
+@media screen and (min-width: 1200px)
+

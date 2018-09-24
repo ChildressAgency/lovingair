@@ -82,7 +82,7 @@
     <div class="section">
         <div class="examples">
             <div class="examples__left">
-                <h5>Examples of HVAC products that we service</h5>
+                <h5>Examples of HVAC products that we service:</h5>
                 <p>Boilers</p>
                 <p>Ductless HVAC Systems</p>
                 <p>Gas Furnaces</p>
@@ -90,7 +90,34 @@
                 <p>Heat Pump</p>
                 <p>Unit Heaters</p>
             </div>
-            <div class="examples__right"></div>
+            <div class="examples__right">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/hvac-examples.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="section section--thin">
+            <div class="section__heading">
+                <h3>Customer Loyalty Service Agreement</h3>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <ul class="checklist checklist--dark">
+                        <li>Offer yearly service agreements</li>
+                        <li>Evaluate your system and get your system up to our standards</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <ul class="checklist checklist--dark">
+                        <li>Receive 15% off of parts and labor</li>
+                        <li>Two services per year—one heating and one cooling inspection</li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn-primary btn-center">Learn More</a>
         </div>
     </div>
 

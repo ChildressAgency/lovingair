@@ -10,7 +10,7 @@
             <p>PRIORITY SERVICES MEMBERSHIP IS FREE</p>
             <div class="discount">
                 <div class="discount__flag"></div>
-                <span>15% Discount</span><!-- skew boxes on the side -->
+                <span>15% Discount</span>
             </div>
             <a href="" class="btn btn-primary">SIGN UP</a>
         </div>
@@ -54,20 +54,19 @@
                     <h3>Check Out Our</h3>
                     <h2>Special Promotions</h2>
                 </div>
-                <!-- <h2>Check Out Our<br/><span class="side-borders"><span class="promotions__subheading">Special Promotions!</span></span></h2> -->
                 <div class="promotions__arrow"></div>
             </div>
             <div class="promotions__content container section">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-12 col-md-4">
                         <a href="#"><h3 class="promotions__title">Free Aprilaire Digital Programmable Thermostat</h3></a>
                         <p class="promotions__excerpt">with the purchase of a New System. ($250 value)<br/>Offer expires August 31, 2018</p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-4">
                         <a href="#"><h3 class="promotions__title">Looking for financing options? We’ve got you covered!!</h3></a>
                         <p class="promotions__excerpt">72 Month Financing Available 0% APR<br/>Call Us for details</p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-12 col-md-4">
                         <a href="#"><h3 class="promotions__title">Get Your $49 Season Tune Up</h3></a>
                         <p class="promotions__excerpt">We guarantee that you will save $100 on your next electrical bill between now and the next 6 months or we will refund your money back! We will also waive the service fee through the end of summer and offer 15% off</p>
                     </div>
@@ -85,21 +84,21 @@
             <p>Whether it’s summer or winter, keep your home or business at a comfortable temperature. Our team of friendly technicians can find a heating or cooling solution that suits your needs. We offer comprehensive maintenance programs to ensure that your heating and cooling systems perform efficiently all year round.</p>
         
             <div class="row services section">
-                <a class="col-4 services__service" href="#">
+                <a class="col-12 col-md-4 services__service" href="#">
                     <div class="services__image-wrapper">
                         <img class="services__icon" src="<?php echo get_stylesheet_directory_uri(); ?>/images/services-1-hover.png">
                         <img class="services__image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/services-1.png">
                     </div>
                     <h3 class="services__title" >HEATING</h3>
                 </a>
-                <a class="col-4 services__service" href="#">
+                <a class="col-12 col-md-4 services__service" href="#">
                     <div class="services__image-wrapper">
                         <img class="services__icon" src="<?php echo get_stylesheet_directory_uri(); ?>/images/services-2-hover.png">
                         <img class="services__image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/services-2.png">
                     </div>
                     <h3 class="services__title" >COOLING</h3>
                 </a>
-                <a class="col-4 services__service" href="#">
+                <a class="col-12 col-md-4 services__service" href="#">
                     <div class="services__image-wrapper">
                         <img class="services__icon" src="<?php echo get_stylesheet_directory_uri(); ?>/images/services-3-hover.png">
                         <img class="services__image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/services-3.png">
@@ -116,7 +115,7 @@
                     <h3>You Won't Like Us, You'll Love Us!</h3>
                     <p>The professionals at Loving Air Inc can do everything from repairs, service & maintenance to complete system upgrades and new installations.</p>
                     <div class="row text-left">
-                        <div class="col-4">
+                        <div class="col-12 col-sm-6 col-md-4">
                             <ul class="checklist">
                                 <li>Family Owned and Operated</li>
                                 <li>Fully Licensed and Insured</li>
@@ -125,7 +124,7 @@
                                 <li>Industry Standard Warranties</li>
                             </ul>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-sm-6 col-md-4">
                             <ul class="checklist">
                                 <li>2 Hour Window on Appointments</li>
                                 <li>VA Master HVAC Technician</li>
@@ -133,7 +132,7 @@
                                 <li>Same Day Service*</li>
                             </ul>
                         </div>
-                        <div class="col-4">
+                        <div class="col-12 col-md-4">
                             <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/amana-logo.png" alt="">
                             <p>Loving Air Inc. is proud to carray Amana Heating and Air systems.</p>
                         </div>
@@ -144,10 +143,10 @@
         
         <div class="section reviews container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/images/reviews-dog.png" alt="">
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <h2 class="reviews__heading">Customer Reviews</h2>
                     <div class="carousel slide" id="reviews-carousel" data-ride="carousel">
                         <ol class="carousel-indicators">
@@ -188,7 +187,7 @@
         
         <div class="section container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <div class="section__heading">
                         <h2>Financing Available</h2>
                     </div>
@@ -196,7 +195,7 @@
                     <p>We offer Same-As-Cash financing with no payments and no interest for 18 months!* Apply now through EnerBank USA</p>
                     <p class="fine-print">*Loans provided by EnerBank USA, Member FDIC, (1245 Brickyard Rd., Suite 600, Salt Lake City, UT 84106) on approved credit, for a limited time. Repayment terms vary from 24 to 132 months. Interest waived if repaid in 365 days. 18.10% fixed APR, effective as of September 1, 2018, subject to change. Interest starts accruing when the loan closes.</p>
                 </div>
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <a href="#"><img class="img-center" src="<?php echo get_stylesheet_directory_uri(); ?>/images/financing.png"></a>
                 </div>
             </div>
@@ -207,11 +206,11 @@
             <div class="home-contact__info">
                 <div class="container">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-sm-6">
                             <p><strong>Hours of Operation</strong></p>
                             <p><?php the_field( 'hours_of_operation', 'options' ); ?></p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-sm-6">
                             <p><strong>Location</strong></p>
                             <?php $location = get_field( 'location', 'options' ); ?>
                             <p><?php echo $location['address_1']; ?><br/><?php echo $location['address_2']; ?><br/><?php echo $location['city_state_zip']; ?></p>
