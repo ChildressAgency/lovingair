@@ -46,20 +46,20 @@ h1
     font-size: $font-size-page-heading
 
 h2
-    font-size: $font-size-heading
+    font-size: 40px
     font-weight: bold
 
 h3
-    font-size: $font-size-subheading
+    font-size: 32px
 
 h4
-    font-size: $font-size-small-heading
+    font-size: 26px
 
 h5
-    font-size: $font-size-smaller-heading
+    font-size: 20px
 
 h6
-    font-size: $font-size-smallest-heading
+    font-size: 18px
 
 p
     line-height: 1.5
@@ -246,17 +246,32 @@ span
 
     &__heading
         margin-bottom: $margin-xl
+        padding: 0 15px
 
+        h2,
         h3,
         h4,
         h5,
         h6
             text-align: center
 
+        h3
+            font-size: 30px
+
+        h4
+            font-size: 26px
+
+        h5
+            font-size: 20px
+
+        h6
+            font-size: 18px
+
         h2
             display: inline-block
+            font-size: 30px
             left: 50%
-            padding: 0 30px
+            padding: 0 15px
             position: relative
             transform: translateX(-50%)
 
@@ -285,6 +300,9 @@ span
         clear: both
         content: ' '
         display: table
+
+    p
+        padding: 0 15px
 
 .dark-overlay
     background-color: rgba(0, 0, 0, .4)
@@ -331,16 +349,23 @@ span
 
 .checklist
     list-style-image: url('images/check.png');
+    list-style-position: inside
 
     &--dark
         list-style-image: url('images/check-dark.png');
+
+.row
+    margin-left: 0
+    margin-right: 0
+
+    p
+        padding: 0
 
 ///////////////////////////////////////////////////////////////////////////////
 // HOME                                                                      //
 ///////////////////////////////////////////////////////////////////////////////
 
 .home-hero
-    height: 85vh
     position: relative
     z-index: 0
 
@@ -349,7 +374,7 @@ span
         overflow: hidden
 
         &-inner
-            height: 100%
+            height: 400px
 
         &-item
             background-size: cover
@@ -380,17 +405,25 @@ span
             font-size: $font-size-carousel-text
             height: 100%
             justify-content: center
-            left: 300px
-            right: 300px
+            left: 50%
+            right: unset
+            transform: translateX(-50%)
+            width: 90%
+
+            p
+                line-height: 1
 
         &__heading
-            font-size: $font-size-carousel-heading
+            font-size: 30px
+            margin-bottom: 10px
 
         &__subheading
-            font-size: $font-size-carousel-subheading
+            font-size: 20px
+            line-height: 1
+            margin-bottom: 10px
 
         &__btn
-            bottom: 10%
+            bottom: 5%
             position: absolute
 
         &-sidebar
@@ -400,13 +433,13 @@ span
             display: flex
             flex-direction: column
             justify-content: center
-            padding: 30px
-            position: absolute
-            right: $margin-md
+            padding: 30px 60px
+            position: relative
+            right: 0
             text-align: center
-            top: 50%
-            transform: translateY(-50%)
-            width: 250px
+            top: 0
+            transform: none
+            width: 100%
             z-index: 9
 
             .discount
@@ -456,7 +489,7 @@ span
         width: 100%
 
         h2
-            font-size: $font-size-subheading
+            font-size: 30px
 
     &__subheading
         @extend %skew-back
@@ -484,7 +517,14 @@ span
             width: 20px
 
     &__title
-        font-size: $font-size-promotion-title
+        font-size: 20px
+        margin-bottom: 10px
+
+    &__content
+        text-align: center
+
+    &__excerpt
+        margin-bottom: 30px
 
 .services
     font-size: $font-size-services-title
@@ -538,6 +578,7 @@ span
     &__heading
         color: $color-reviews-section
         margin-top: $margin-lg
+        text-align: center
 
     .carousel
         &__reviewer
@@ -554,18 +595,21 @@ span
     &__heading
         color: $color-primary
         margin-top: $margin-sm
-        position: absolute
         text-align: center
         width: 100%
+        // position: absolute
 
     &__info
         background-color: rgba(255, 255, 255, .8)
         color: $color-black
-        left: $margin-md
         padding: 15px
-        position: absolute
-        top: 50%
-        transform: translateY(-50%)
+        position: relative
+        text-align: center
+        width: 100%
+        // left: $margin-md
+        // position: absolute
+        // top: 50%
+        // transform: translateY(-50%)
 
     &__map
         width: 100%
