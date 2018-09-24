@@ -95,13 +95,15 @@ a
 
     &__action
         display: flex
-        justify-content: flex-end
+        flex-direction: column
+        justify-content: center
         margin-bottom: $margin-md
 
     &__quote
         align-items: center
         display: flex
         flex-direction: column
+        margin-bottom: 30px
 
     &__call
         color: $color-primary
@@ -127,14 +129,11 @@ a
 
         .nav-item
             @extend %skew
-            border-right: 1px solid $color-primary
             padding: 5px 10px
             position: relative
+            text-align: center
             transition: .3s ease background-color
             z-index: 999
-
-            &:last-of-type
-                border: 0
 
             &.active,
             &:hover
@@ -176,10 +175,19 @@ a
             a
                 color: $color-white
                 margin: $margin-xs 0
+                white-space: normal
 
                 &:hover
                     background-color: transparent
                     color: $color-primary
+
+.navbar-toggler
+    font-size: 24px
+    width: 100%
+
+.navbar-brand
+    margin: 0 auto
+    margin-bottom: 15px
 
 .menu-header-menu-container
     margin-left: auto
@@ -712,3 +720,8 @@ footer
             &:hover
                 color: $color-secondary
 
+///////////////////////////////////////////////////////////////////////////////
+// RESPONSIVENESS                                                            //
+///////////////////////////////////////////////////////////////////////////////
+
+@import _responsive.sass
