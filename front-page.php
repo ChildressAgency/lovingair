@@ -10,7 +10,7 @@
             <p>PRIORITY SERVICES MEMBERSHIP IS FREE</p>
             <div class="discount">
                 <div class="discount__flag"></div>
-                <span>15% Discount</span><!-- skew boxes on the side -->
+                <span>15% Discount</span>
             </div>
             <a href="" class="btn btn-primary">SIGN UP</a>
         </div>
@@ -54,7 +54,6 @@
                     <h3>Check Out Our</h3>
                     <h2>Special Promotions</h2>
                 </div>
-                <!-- <h2>Check Out Our<br/><span class="side-borders"><span class="promotions__subheading">Special Promotions!</span></span></h2> -->
                 <div class="promotions__arrow"></div>
             </div>
             <div class="promotions__content container section">
