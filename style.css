@@ -875,6 +875,7 @@ footer .nav-link {
     text-align: left;
     top: 50%;
     transform: translateY(-50%);
+    width: auto;
   }
 
   .promotions__content {
@@ -913,6 +914,10 @@ footer .nav-link {
     right: 320px;
     transform: none;
     width: auto;
+  }
+
+  .navbar-expand-lg .navbar-nav .dropdown-menu a {
+    white-space: nowrap;
   }
 }
 
