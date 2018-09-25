@@ -73,107 +73,10 @@
                 </div>
             </div>
         </div>
+
+        <?php get_template_part( 'tp-flexible-content' ); ?>
         
-        <div class="slash-separator"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slash-separator.png"></div>
-        
-        <div class="section container">
-            <div class="section__heading">
-                <h2>Our Services</h2>
-            </div>
-        
-            <p>Whether it’s summer or winter, keep your home or business at a comfortable temperature. Our team of friendly technicians can find a heating or cooling solution that suits your needs. We offer comprehensive maintenance programs to ensure that your heating and cooling systems perform efficiently all year round.</p>
-        
-            <div class="row services section">
-                <a class="col-12 col-md-4 services__service" href="#">
-                    <div class="services__image-wrapper">
-                        <img class="services__icon" src="<?php echo get_stylesheet_directory_uri(); ?>/images/services-1-hover.png">
-                        <img class="services__image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/services-1.png">
-                    </div>
-                    <h3 class="services__title" >HEATING</h3>
-                </a>
-                <a class="col-12 col-md-4 services__service" href="#">
-                    <div class="services__image-wrapper">
-                        <img class="services__icon" src="<?php echo get_stylesheet_directory_uri(); ?>/images/services-2-hover.png">
-                        <img class="services__image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/services-2.png">
-                    </div>
-                    <h3 class="services__title" >COOLING</h3>
-                </a>
-                <a class="col-12 col-md-4 services__service" href="#">
-                    <div class="services__image-wrapper">
-                        <img class="services__icon" src="<?php echo get_stylesheet_directory_uri(); ?>/images/services-3-hover.png">
-                        <img class="services__image" src="<?php echo get_stylesheet_directory_uri(); ?>/images/services-3.png">
-                    </div>
-                    <h3 class="services__title" >COMMERCIAL</h3>
-                </a>
-            </div>
-        </div>
-        
-        <div class="section--background" style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/images/ac-units.png');">
-            <div class="dark-overlay">
-                <div class="container text-center">
-                    <h2>Over 20 Years of Experience</h2>
-                    <h3>You Won't Like Us, You'll Love Us!</h3>
-                    <p>The professionals at Loving Air Inc can do everything from repairs, service & maintenance to complete system upgrades and new installations.</p>
-                    <div class="row text-left">
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <ul class="checklist">
-                                <li>Family Owned and Operated</li>
-                                <li>Fully Licensed and Insured</li>
-                                <li>Quick Response Time</li>
-                                <li>Class A Virginia Contractor's License</li>
-                                <li>Industry Standard Warranties</li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <ul class="checklist">
-                                <li>2 Hour Window on Appointments</li>
-                                <li>VA Master HVAC Technician</li>
-                                <li>Extended Warranties Available</li>
-                                <li>Same Day Service*</li>
-                            </ul>
-                        </div>
-                        <div class="col-12 col-md-4">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/amana-logo.png" alt="">
-                            <p>Loving Air Inc. is proud to carray Amana Heating and Air systems.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section reviews container">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/images/reviews-dog.png" alt="">
-                </div>
-                <div class="col-12 col-md-6">
-                    <h2 class="reviews__heading">Customer Reviews</h2>
-                    <div class="carousel slide" id="reviews-carousel" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#reviews-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#reviews-carousel" data-slide-to="1"></li>
-                            <li data-target="#reviews-carousel" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <p>A great service today! Thank you for coming to our rescue. After many different experiences with places we felt like did not serve us, we were THRILLED with your honest assessment of the situation, how quickly you identified the issue, and fixed it quickly, without just trying to sell us a whole new system. We will definitely be using you again!</p>
-                                <p class="carousel__reviewer">- Victoria McCollum, Fredericksburg, VA</p>
-                            </div>
-                            <div class="carousel-item">
-                                <p>A great service today! Thank you for coming to our rescue. After many different experiences with places we felt like did not serve us, we were THRILLED with your honest assessment of the situation, how quickly you identified the issue, and fixed it quickly, without just trying to sell us a whole new system. We will definitely be using you again!</p>
-                                <p class="carousel__reviewer">- Victoria McCollum, Fredericksburg, VA</p>
-                            </div>
-                            <div class="carousel-item">
-                                <p>A great service today! Thank you for coming to our rescue. After many different experiences with places we felt like did not serve us, we were THRILLED with your honest assessment of the situation, how quickly you identified the issue, and fixed it quickly, without just trying to sell us a whole new system. We will definitely be using you again!</p>
-                                <p class="carousel__reviewer">- Victoria McCollum, Fredericksburg, VA</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section container">
+        <!-- <div class="section container">
             <div class="section__heading">
                 <h2>Our Guarantee</h2>
             </div>
@@ -183,9 +86,9 @@
             <img class="img-center" src="<?php echo get_stylesheet_directory_uri(); ?>/images/rappahannock-electric-cooperative-logo.png">
         </div>
         
-        <div class="slash-separator"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slash-separator.png"></div>
+        <div class="slash-separator"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slash-separator.png"></div> -->
         
-        <div class="section container">
+        <!-- <div class="section container">
             <div class="row">
                 <div class="col-12 col-md-6">
                     <div class="section__heading">
@@ -199,7 +102,7 @@
                     <a href="#"><img class="img-center" src="<?php echo get_stylesheet_directory_uri(); ?>/images/financing.png"></a>
                 </div>
             </div>
-        </div>
+        </div> -->
         
         <div class="home-contact">
             <h2 class="home-contact__heading">Contact Us</h2>

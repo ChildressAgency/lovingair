@@ -24,7 +24,7 @@
 	  );
 	  
 	  wp_enqueue_script('bootstrap-script');
-	  //wp_enqueue_script('lovingair-script');
+	  wp_enqueue_script('lovingair-script');
 	}
 	add_action('wp_enqueue_scripts', 'lovingair_scripts', 100);
 	
@@ -37,11 +37,23 @@
 	}
 	add_action('wp_enqueue_scripts', 'lovingair_styles');
 
+	// Global Settings
 	if(function_exists('acf_add_options_page')){
 	  acf_add_options_page(array(
 	    'page_title' => 'Global Site Settings',
 	    'menu_title' => 'Global Settings',
 	    'menu_slug' => 'global-settings',
+	    'capability' => 'edit_posts',
+	    'redirect' => false
+	  ));
+	}
+
+	// Reviews
+	if(function_exists('acf_add_options_page')){
+	  acf_add_options_page(array(
+	    'page_title' => 'Reviews',
+	    'menu_title' => 'Reviews',
+	    'menu_slug' => 'reviews',
 	    'capability' => 'edit_posts',
 	    'redirect' => false
 	  ));
@@ -65,6 +77,11 @@
 		'footer_menu' => 'Footer Menu'
 	) );
 
+	// remove p tags from images
+	function filter_ptags_on_images( $content ){
+	    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+	}
+	add_filter('the_content', 'filter_ptags_on_images');
 
 	// Custom Nav Walker
 	class Custom_Nav_Walker extends Walker_Nav_Menu {

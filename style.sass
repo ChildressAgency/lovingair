@@ -196,6 +196,26 @@ a
 // CONTENT - REUSABLE                                                        //
 ///////////////////////////////////////////////////////////////////////////////
 
+.aligncenter
+    display: block
+    margin: 0 auto
+
+.alignright
+    float: right
+
+    &::after
+        clear: both
+        content: ' '
+        display: table
+
+.alignleft
+    float: left
+
+    &::after
+        clear: both
+        content: ' '
+        display: table
+
 .btn
     @extend %font-btn
     border: 1px solid transparent

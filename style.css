@@ -218,6 +218,29 @@ a {
   margin-left: auto;
 }
 
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+.alignright {
+  float: right;
+}
+.alignright::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+.alignleft {
+  float: left;
+}
+.alignleft::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
 .btn {
   border: 1px solid transparent;
   border-radius: 5px;
@@ -869,6 +892,9 @@ footer .nav-link {
     right: 350px;
   }
 
+  .home-contact__heading {
+    position: absolute;
+  }
   .home-contact__info {
     left: 30px;
     position: absolute;
