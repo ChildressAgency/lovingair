@@ -43,7 +43,7 @@ h6
     margin-bottom: $margin-md
 
 h1
-    font-size: $font-size-page-heading
+    font-size: 45px
 
 h2
     font-size: 40px
@@ -73,6 +73,7 @@ div
     background-size: cover
 
 img
+    height: auto
     max-width: 100%
 
 ul
@@ -219,6 +220,9 @@ a
 .acf-map
     height: 500px
 
+    &--contact
+        height: 350px
+
 .btn
     @extend %font-btn
     border: 1px solid transparent
@@ -317,15 +321,12 @@ span
 
     &--thin
         margin: 0 auto
-        max-width: 80%
+        max-width: 100%
 
     &::after
         clear: both
         content: ' '
         display: table
-
-    p
-        padding: 0 15px
 
 .dark-overlay
     background-color: rgba(0, 0, 0, .4)
@@ -735,6 +736,7 @@ span
 
 .examples
     display: flex
+    flex-direction: column
 
     &__left
         background-color: $color-dark
@@ -745,6 +747,13 @@ span
         justify-content: center
         padding: 30px
         text-align: center
+
+    &__right
+        width: 100%
+
+        img
+            height: auto
+            width: 100%
 
 ///////////////////////////////////////////////////////////////////////////////
 // FOOTER                                                                    //

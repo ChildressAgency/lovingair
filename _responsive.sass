@@ -2,7 +2,7 @@
 
 @media screen and (min-width: 576px)
     h1
-        font-size: $font-size-page-heading
+        font-size: 50px
 
     h2
         font-size: $font-size-heading
@@ -63,8 +63,8 @@
             h6
                 font-size: $font-size-smallest-heading
 
-        p
-            padding: 0
+        &--thin
+            width: 80%
 
     .promotions
         &__header
@@ -78,6 +78,9 @@
             margin-bottom: 15px
 
 @media screen and (min-width: 768px)
+    h1
+        font-size: 60px
+
     .home-hero
         height: 85vh
 
@@ -122,6 +125,17 @@
     .reviews
         &__heading
             text-align: left
+
+    .examples
+        flex-direction: row
+
+        &__right
+            width: 60%
+
+            img
+                height: 100%
+                max-width: unset
+                width: auto
 
 
 @media screen and (min-width: 992px)

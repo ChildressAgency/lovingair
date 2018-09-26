@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php 
+/** Template Name: Team Template */
+
+get_header(); ?>
 
     <?php get_template_part( 'tp-banner' ); ?>
 

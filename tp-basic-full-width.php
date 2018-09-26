@@ -1,7 +1,11 @@
-<div class="section container">
-    <div class="section__heading">
-        <?php the_sub_field( 'section_heading' ); ?>
+<div class="container">
+    <div class="section <?php if( get_sub_field( 'is_thin' ) ) echo 'section--thin'; ?>">
+        <?php if( get_sub_field( 'section_heading' ) ): ?>
+            <div class="section__heading">
+                <?php the_sub_field( 'section_heading' ); ?>
+            </div>
+        <?php endif; ?>
+    
+        <?php the_sub_field( 'content' ); ?>
     </div>
-
-    <?php the_sub_field( 'content' ); ?>
 </div>
