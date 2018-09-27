@@ -12,9 +12,6 @@ if( have_rows('custom_fields') ):
         elseif( get_row_layout() == 'basic_full_width' ):
             get_template_part( 'tp-basic-full-width' );
 
-        elseif( get_row_layout() == 'services' ):
-            get_template_part( 'tp-services' );
-
         elseif( get_row_layout() == '2_col' ):
             get_template_part( 'tp-2-col' );
 
@@ -24,11 +21,8 @@ if( have_rows('custom_fields') ):
         elseif( get_row_layout() == 'checklist' ):
             get_template_part( 'tp-checklist' );
 
-        elseif( get_row_layout() == '2_col_left_heading' ):
-            get_template_part( 'tp-2-col-left-heading' );
-
-        elseif( get_row_layout() == '2_col_left_heading' ):
-            get_template_part( 'tp-2-col-left-heading' );
+        elseif( get_row_layout() == 'slideshow' ):
+            get_template_part( 'tp-slideshow' );
 
         elseif( get_row_layout() == '3_col_with_background' ):
             get_template_part( 'tp-3-col-with-background' );
@@ -38,6 +32,9 @@ if( have_rows('custom_fields') ):
 
         elseif( get_row_layout() == 'reviews' ):
             get_template_part( 'tp-reviews' );
+
+        elseif( get_row_layout() == 'services' ):
+            get_template_part( 'tp-services' );
 
         endif;
 
