@@ -547,6 +547,9 @@ span
     &__content
         text-align: center
 
+        .row
+            justify-content: center
+
     &__excerpt
         margin-bottom: 30px
 
@@ -651,19 +654,23 @@ span
         width: 80%
 
     &__input
-        display: flex
-        flex-direction: column
+        display: grid
+        grid-template-areas: 'label' 'input'
+        grid-template-columns: 1fr
+        grid-template-rows: auto
         width: 100%
 
         label
             background-color: $color-white
             font-weight: bold
+            grid-area: label
             margin: 0
             padding: 7px
             position: relative
             text-align: center
 
         span
+            grid-area: input
             margin-bottom: 15px
             margin-left: auto
             width: 100%
