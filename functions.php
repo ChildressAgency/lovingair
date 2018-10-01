@@ -68,7 +68,7 @@
 
 	// load fonts
 	function load_fonts() {
-		wp_enqueue_style( 'open-sans', 'https://fonts.googleapis.com/css?family=Encode+Sans:300,400,700', false );
+		wp_enqueue_style( 'open-sans', '//fonts.googleapis.com/css?family=Encode+Sans:300,400,700', false );
 	}
 	add_action( 'wp_enqueue_scripts', 'load_fonts' );
 
