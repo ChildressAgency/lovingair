@@ -35,12 +35,12 @@
                     <div class="header__action">
                         <div class="header__quote">
                             <p class="header__heading">Same Day Service Available</p>
-                            <a href="#" class="btn btn-primary">Request A Quote</a>
+                            <a href="contact-us/" class="btn btn-primary">Request A Quote</a>
                         </div>
                         <div class="header__call">
                             <p class="header__heading">Call Us!</p>
                             <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/images/phone.png">
-                            <p class="header__phone"><?php the_field( 'phone', 'options' ); ?></p>
+                            <p class="header__phone"><a href="tel:<?php the_field( 'phone', 'options' ); ?>"><?php the_field( 'phone', 'options' ); ?></a></p>
                         </div>
                     </div>
                     <div class="header__menu">

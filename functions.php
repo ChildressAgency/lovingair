@@ -1,4 +1,11 @@
 <?php
+
+	// add_action('wp_footer', 'show_template');
+	// function show_template() {
+	// 	global $template;
+	// 	print_r($template);
+	// }
+
 	function jquery_cdn(){
 	  if(!is_admin()){
 		wp_deregister_script('jquery');
@@ -24,7 +31,7 @@
 	  );
 	  
 	  wp_enqueue_script('bootstrap-script');
-	  //wp_enqueue_script('lovingair-script');
+	  wp_enqueue_script('lovingair-script');
 	}
 	add_action('wp_enqueue_scripts', 'lovingair_scripts', 100);
 	
@@ -37,6 +44,7 @@
 	}
 	add_action('wp_enqueue_scripts', 'lovingair_styles');
 
+	// Global Settings
 	if(function_exists('acf_add_options_page')){
 	  acf_add_options_page(array(
 	    'page_title' => 'Global Site Settings',
@@ -47,9 +55,20 @@
 	  ));
 	}
 
+	// Reviews
+	if(function_exists('acf_add_options_page')){
+	  acf_add_options_page(array(
+	    'page_title' => 'Reviews',
+	    'menu_title' => 'Reviews',
+	    'menu_slug' => 'reviews',
+	    'capability' => 'edit_posts',
+	    'redirect' => false
+	  ));
+	}
+
 	// load fonts
 	function load_fonts() {
-		wp_enqueue_style( 'open-sans', 'https://fonts.googleapis.com/css?family=Encode+Sans:300,400,700', false );
+		wp_enqueue_style( 'open-sans', '//fonts.googleapis.com/css?family=Encode+Sans:300,400,700', false );
 	}
 	add_action( 'wp_enqueue_scripts', 'load_fonts' );
 
@@ -65,6 +84,28 @@
 		'footer_menu' => 'Footer Menu'
 	) );
 
+	// remove p tags from images
+	function filter_ptags_on_images( $content ){
+	    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+	}
+	add_filter('the_content', 'filter_ptags_on_images');
+
+	// Google Maps Api Scripts for ACF
+	function acf_google_map_scripts() {
+		$api_key = 'https://maps.googleapis.com/maps/api/js?key=';
+		$api_key .= get_field( 'google_maps_api_key', 'options' );
+
+		wp_enqueue_script( 'google-map', $api_key, array(), '3', true );
+		wp_enqueue_script( 'google-map-init', get_template_directory_uri() . '/js/map.js', array('google-map', 'jquery'), '0.1', true );
+	}
+	add_action( 'wp_enqueue_scripts', 'acf_google_map_scripts' );
+
+	// Google Maps Api Key for ACF
+	function acf_google_map_api( $api ){
+		$api['key'] = get_field( 'google_maps_api_key', 'options' );
+		return $api;
+	}
+	add_filter('acf/fields/google_map/api', 'acf_google_map_api');
 
 	// Custom Nav Walker
 	class Custom_Nav_Walker extends Walker_Nav_Menu {
