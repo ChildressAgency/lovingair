@@ -32,6 +32,9 @@
 	  
 	  wp_enqueue_script('bootstrap-script');
 	  wp_enqueue_script('lovingair-script');
+	
+	  //$phone = lovingair_get_phone_number();
+      //wp_localize_script('lovingair-script', 'adPhone', $phone);
 	}
 	add_action('wp_enqueue_scripts', 'lovingair_scripts', 100);
 	
@@ -112,7 +115,14 @@
 
 	    function start_el(&$output, $item, $depth = 0, $args = array(), $current_object_id = 0) {
 	        global $post;
-	        $pageID = $post->ID; // id of current page
+	        //$pageID = $post->ID; // id of current page
+	      if($post && $post->ID){
+            $pageID = $post->ID; // id of current page
+          }
+          else{
+            $pageID = 0;
+          }
+
 			$title = $item->title; // title of menu item
 			$objectID = $item->object_id; // page id of menu item
 			$permalink = $item->url; // link of menu item
@@ -194,4 +204,30 @@
 	    return $items;
 	}
 	add_filter( 'wp_nav_menu_objects', 'add_has_children_to_nav_items' );
-?>
+
+/*
+  add_action('wp', 'lovingair_set_adphone_cookie', 10);
+  function lovingair_set_adphone_cookie(){
+    if(is_page_template('template-landingpage.php')){
+      global $wp_query;
+      
+      $ad_phone = get_post_meta($wp_query->post->ID, 'alternate_phone_number', true);
+      
+      setcookie('lovingair_ad_phone', $ad_phone, time() + (86400 * 30), COOKIEPATH, COOKIE_DOMAIN);
+    }
+  }
+  
+  function lovingair_get_phone_number(){
+      if(isset($_COOKIE['lovingair_ad_phone'])){
+        $phone = $_COOKIE['lovingair_ad_phone'];
+      }
+      elseif(is_page_template('template-landingpage.php')){
+        $phone = get_post_meta(get_the_ID(), 'alternate_phone_number', true);
+      }
+      else{
+        $phone = get_option('options_phone');
+      } 
+      
+      return $phone;
+  }
+  */

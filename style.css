@@ -85,6 +85,12 @@ h2 {
   font-weight: bold;
 }
 
+.blog-title{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 h3 {
   font-size: 32px;
 }
@@ -134,6 +140,16 @@ a {
 .header__main {
   width: 100%;
 }
+.header_icons{
+	display:flex;
+	justify-content: center;
+}
+.icons{
+	display:flex;
+}
+ul.icons li{
+	width:3em;
+}
 .header__action {
   display: flex;
   flex-direction: column;
@@ -158,6 +174,9 @@ a {
 }
 .header__phone {
   display: inline-block;
+  font-size: 24px;
+  font-size: 2rem;
+  font-weight:800;	
 }
 .header__heading {
   color: #000;
@@ -229,6 +248,9 @@ a {
 
 .menu-header-menu-container {
   margin-left: auto;
+}
+article.post{
+  padding:3rem;  
 }
 
 .aligncenter {
@@ -780,8 +802,9 @@ span.side-borders {
   width: 100%;
 }
 .examples__right img {
-  height: auto;
+  height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 
 footer {
@@ -965,11 +988,11 @@ footer .nav-link {
   .examples__right {
     width: 60%;
   }
-  .examples__right img {
+  /*.examples__right img {
     height: 100%;
     max-width: unset;
     width: auto;
-  }
+  }*/
 
   .membership__benefits-wrapper {
     flex-direction: row;

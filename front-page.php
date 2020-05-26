@@ -75,7 +75,9 @@
                             <p><strong>Location</strong></p>
                             <?php $location = get_field( 'location', 'options' ); ?>
                             <p><?php echo $location['address_1']; ?><br/><?php echo $location['address_2']; ?><br/><?php echo $location['city_state_zip']; ?></p>
-                            <p><strong>Phone:</strong> <?php the_field( 'phone', 'options' ); ?></p>
+                            <?php //$phone = lovingair_get_phone_number(); ?>
+                            <?php $phone = get_field('phone', 'option'); ?>
+                            <p><strong>Phone: </strong><a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a></p>
                             <p><strong>Find us on: </strong>
                                 <span class="footer__social">
                                     <?php if( get_field( 'facebook', 'options' ) ): ?><a href="<?php the_field( 'facebook', 'options' ); ?>"><i class="fab fa-facebook-f"></i></a><?php endif; ?>
@@ -89,8 +91,6 @@
                     </div>
                 </div>
             </div>
-
-            <?php //the_field( 'map' ); ?>
 
             <?php 
             $location = get_field('location');

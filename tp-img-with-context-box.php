@@ -4,7 +4,10 @@
             <?php the_sub_field( 'text' ); ?>
         </div>
         <div class="examples__right">
-            <img src="<?php the_sub_field( 'image' ); ?>">
+            <?php
+              $image = get_sub_field('image');
+            ?>
+            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
         </div>
     </div>
 </div>

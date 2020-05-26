@@ -22,7 +22,7 @@ get_header(); ?>
                     <?php endif; ?>
 
                     <div class="col-12 col-md-6">
-                        <img src="<?php the_sub_field( 'image' ); ?>" class="img-center">
+                        <img src="<?php the_sub_field( 'image' ); ?>" class="img-center" alt="Team Member Image">
                         <p class="team__name"><?php the_sub_field( 'name' ); ?></p>
                     </div>
                 <?php $i++; endwhile; endif; ?>

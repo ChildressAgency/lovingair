@@ -2,7 +2,10 @@
     <div class="section reviews <?php if( get_sub_field( 'is_thin' ) ) echo 'section--thin'; ?>">
         <div class="row">
             <div class="col-12 col-md-6">
-                <img class="img-fluid" src="<?php the_sub_field( 'image' ); ?>">
+                <?php
+                   $image=get_sub_field('image');
+                ?>
+                <img class="img-fluid" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
             </div>
             <div class="col-12 col-md-6">
                 <h2 class="reviews__heading">Customer Reviews</h2>

@@ -34,7 +34,9 @@ get_header(); ?>
                                 <p><strong>Phone</strong></p>
                             </div>
                             <div class="col-12 col-md-8">
-                                <p><a href="tel:<?php the_field( 'phone', 'options' ); ?>"><?php the_field( 'phone', 'options' ); ?></a></p>
+                                <?php //$phone = lovingair_get_phone_number(); ?>
+                                <?php $phone = get_field('phone', 'option'); ?>
+                                <p><a href="tel:<?php echo $phone; ?>"><?php echo $phone; ?></a></p>
                             </div>
                         </div>
                     </div>
@@ -71,8 +73,8 @@ get_header(); ?>
     $side_images = get_field( 'side_images' ); 
     if( $side_images ): ?>
         <div class="contact__side-images">
-            <img class="contact__img contact__img--left" src="<?php echo $side_images['left_image']; ?>">
-            <img class="contact__img contact__img--right" src="<?php echo $side_images['right_image']; ?>">
+            <img class="contact__img contact__img--left" src="<?php echo $side_images['left_image']['url']; ?>" alt="<?php echo $side_images['left_image']['alt']; ?>">
+            <img class="contact__img contact__img--right" src="<?php echo $side_images['right_image']['url']; ?>" alt="<?php echo $side_images['right_image']['alt']; ?>">
         </div>
     <?php endif; ?>
 

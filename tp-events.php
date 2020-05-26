@@ -20,7 +20,7 @@ if( $query->have_posts() ): ?>
             <div class="container">
                 <?php $i = 0; while( $query->have_posts() ): $query->the_post(); ?>
 
-                    <?php if( $i != 0 ) echo "<div class=\"slash-separator\"><img src=\"" . get_stylesheet_directory_uri() . "/images/slash-separator.png\"></div>"; ?>
+                    <?php if( $i != 0 ) echo '<div class="slash-separator"><img src="' . get_stylesheet_directory_uri() . '/images/slash-separator.png" alt=""></div>'; ?>
                     
                     <?php get_template_part( 'tp-flexible-content' ); ?>
 

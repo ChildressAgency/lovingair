@@ -32,7 +32,7 @@ get_header(); ?>
                         </ul>
                     <?php endif; ?>
                 </div>
-                <img src="<?php the_field( 'benefits_image' ); ?>">
+                <img src="<?php the_field( 'benefits_image' ); ?>" alt="">
             </div>
         </div>
 

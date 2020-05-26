@@ -10,8 +10,12 @@
             <?php if( have_rows( 'services' ) ): while( have_rows( 'services' ) ): the_row(); ?>
                 <a class="col-12 col-md-4 services__service" href="<?php the_sub_field( 'service_link' ); ?>">
                     <div class="services__image-wrapper">
-                        <img class="services__icon" src="<?php the_sub_field( 'hover_icon' ); ?>">
-                        <img class="services__image" src="<?php the_sub_field( 'image' ); ?>">
+                        <?php 
+                            $hover_icon = get_sub_field('hover_icon');
+                            $image = get_sub_field('image');
+                        ?>
+                        <img class="services__icon" src="<?php echo $hover_icon['url']; ?>" alt="<?php echo $hover_icon['alt']; ?>">
+                        <img class="services__image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
                     </div>
                     <h3 class="services__title"><?php the_sub_field( 'service_name' ); ?></h3>
                 </a>
