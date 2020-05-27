@@ -1,9 +1,28 @@
 <?php get_header(); ?>
 
-    <?php if( get_field( 'header_announcement' ) ): ?>
-        <div class="header__announcement">
-            <p><?php the_field( 'header_announcement' ); ?></p>
-        </div>
+    <?php if(have_rows('header_announcements')): ?>
+      <div class="header__announcement">
+        <?php while(have_rows('header_announcements')): the_row(); ?>
+          <?php
+            $start_date = get_sub_field('announcement_start_date');
+            $end_date = get_sub_field('announcement_end_date');
+
+            if(lovingair_can_display_announcement($start_date, $end_date)){
+              $announcement = get_sub_field('announcement');
+              $link = get_sub_field('announcement_link');
+
+              echo '<p>';
+                if($link){
+                  echo '<a href="' . esc_url($link['url']) . '">' . esc_html($announcement) . '</a>';
+                }
+                else{
+                  echo esc_html($announcement);
+                }
+              echo '</p>';
+            }
+          ?>
+        <?php endwhile; ?>
+      </div>
     <?php endif; ?>
 
     <div class="home-hero">

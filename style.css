@@ -175,7 +175,6 @@ ul.icons li{
 .header__phone {
   display: inline-block;
   font-size: 24px;
-  font-size: 2rem;
   font-weight:800;	
 }
 .header__heading {
@@ -207,12 +206,22 @@ ul.icons li{
   color: #fff;
   font-size: 18px;
   margin-top: 15px;
-  padding: 15px;
+  /*padding: 15px;*/
   text-align: center;
   width: 100%;
 }
 .header__announcement p {
   margin-bottom: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.header__announcement a{
+  color: #fff;
+}
+.header__announcement a:hover,
+.header__announcement a:focus{
+  color: #fff;
+  text-decoration: underline;
 }
 
 .page-header {

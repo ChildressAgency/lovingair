@@ -231,3 +231,21 @@
       return $phone;
   }
   */
+
+  function lovingair_can_display_announcement($start_date, $end_date){
+    $today = (int)date('Ymd');
+
+    if($start_date !== ''){
+      if($today < (int)$start_date){
+        return false;
+      }
+    }
+
+    if($end_date !== ''){
+      if($today > (int)$end_date){
+        return false;
+      }
+    }
+
+    return true;
+  }
