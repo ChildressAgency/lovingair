@@ -1050,4 +1050,13 @@ footer .nav-link {
   }
 }
 
+.coupon{
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.coupon button{
+  margin-top:25px;
+}
+
 /*# sourceMappingURL=style.css.map */
