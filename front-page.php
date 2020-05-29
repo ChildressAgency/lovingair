@@ -26,7 +26,7 @@
     <?php endif; ?>
 
     <div class="home-hero">
-        <?php $discountFlag = get_field( 'discount_flag' ); 
+      <?php $discountFlag = get_field( 'discount_flag' ); 
         if( $discountFlag ): ?>
             <div class="carousel-sidebar">
                 <h2><?php echo $discountFlag['title']; ?></h2>
@@ -38,14 +38,28 @@
                 <a href="<?php echo $discountFlag['link']; ?>" class="btn btn-primary">SIGN UP</a>
             </div>
         <?php endif; ?>
+
         <div class="carousel slide" id="home-carousel" data-ride="carousel">
             <ol class="carousel-indicators">
-                <?php if( have_rows( 'carousel' ) ): $i = 0; while( have_rows( 'carousel' ) ): the_row(); ?>
+                <?php if( have_rows( 'homepage_carousel' ) ): $i = 0; while( have_rows( 'homepage_carousel' ) ): the_row(); ?>
                     <li data-target="#home-carousel" data-slide-to="<?php echo $i; ?>" <?php if( $i == 0 ) echo 'class="active"'; ?>></li>
                 <?php $i++; endwhile; endif; ?>
             </ol>
             <div class="carousel-inner">
-                <?php if( have_rows( 'carousel' ) ): $i = 0; while( have_rows( 'carousel' ) ): the_row(); ?>
+                <?php if( have_rows( 'homepage_carousel' ) ): $i = 0; while( have_rows( 'homepage_carousel' ) ): the_row(); ?>
+                  <?php if(get_sub_field('carousel_type') == 'video'): ?>
+                    <?php 
+                      $background_color = get_sub_field('background_color');
+                      if(!$background_color){ $background_color = '#333'; }
+                    ?>
+                    <div class="carousel-item<?php if($i == 0){ echo ' active'; } ?>" style="background-color:<?php echo $background_color; ?>">
+                      <div class="carousel-caption">
+                        <div class="embed-responsive embed-responsive-16by9">
+                          <?php the_sub_field('video'); ?>
+                        </div>
+                      </div>
+                    </div>
+                  <?php else: ?>
                     <div class="carousel-item <?php if( $i == 0 ) echo 'active'; ?>" style="background-image: url('<?php the_sub_field( 'background_image' ); ?>');">
                         <div class="carousel-caption">
                             <?php if( get_sub_field( 'heading' ) ): ?><h2 class="carousel__heading"><?php the_sub_field( 'heading' ); ?></h2><?php endif; ?>
@@ -54,6 +68,7 @@
                             <?php if( get_sub_field( 'link' ) ): ?><a href="<?php the_sub_field( 'link' ); ?>" class="btn btn-secondary carousel__btn"><?php the_sub_field( 'button_text' ); ?></a><?php endif; ?>
                         </div>
                     </div>
+                  <?php endif; ?>
                 <?php $i++; endwhile; endif; ?>
             </div>
         </div>
